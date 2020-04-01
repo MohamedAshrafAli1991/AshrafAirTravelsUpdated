@@ -1,0 +1,42 @@
+<div class="">
+    <h1 class="heading-right">Xerox</h1>
+    <div class="content" style="margin-top: 3px;">
+        <h2 style="text-align: center">Xerox Counts</h2>
+    </div>
+    <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <p>
+                    <span class="input-max">
+                        <input type="number" name="newXeroxCount" [(ngModel)]="emp.newXeroxCount" placeholder="New Xerox Machine Count" #newXeroxCount="ngModel" required/>
+                        <span></span>	
+                    </span>
+                </p>
+            </div>
+            <div class="col-4 icofont-warning error" *ngIf="f.submitted && newXeroxCount.invalid"></div>
+        </div>
+       <div class="row" style="margin-bottom: 25px;"></div>
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <p>
+                    <span class="input-max">
+                        <input type="number" name="oldXeroxCount" [(ngModel)]="emp.oldXeroxCount" placeholder="Old Xerox Machine Count" #oldXeroxCount="ngModel" required/>
+                        <span></span>	
+                    </span>
+                </p>
+            </div>
+            <div class="col-4 icofont-warning error" *ngIf="f.submitted && oldXeroxCount.invalid"></div>
+        </div>
+        <div class="row" style="margin-bottom: 25px;"></div>
+        <div class="row">
+                <div class="col-5"></div>
+                <div class="col-6">
+                    <button class="btncus btncus-outline-primary" (click)="saveXerox()">Register</button>
+                </div>
+                <div class="col-1"></div>
+            
+        </div>
+    </form>
+</div>

@@ -1,0 +1,192 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Lato:300,400,700');
+.content {
+	background-color: #ffffff;
+	border-radius: 8px;
+	box-sizing: border-box;
+	color:#2a625b;
+	line-height: 1.4em;
+	margin: 20px auto;
+	margin-top: 80px;
+	padding: 20px;
+	width: 100%;
+	max-width: 60%;
+}
+.content ul {
+	margin: .5em 2em;
+	padding: 0;
+}
+.heading-right {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	margin: 2vmin 3vmin;
+  color: #999;
+}
+.inputContainer{
+    position:relative;
+    top:100px;
+    text-align:center;
+    counter-reset:section;
+}
+.inputContainer span{
+    margin-bottom:22px; 
+    display:inline-block;
+}
+.inputContainer span:last-child{
+    margin-bottom:-11px;
+}
+.input-max {
+    position: relative;
+    font-size: 2.5em;
+    //background: linear-gradient(21deg, #10abff, #1beabd);
+    background: linear-gradient(21deg, #2d655d,#079848);
+    padding: 3px;
+    display: inline-block;
+    border-radius: 9999em;
+}
+.input-max *:not(span) {
+  position: relative;
+  display: inherit;
+  border-radius: inherit;
+  margin: 0;
+  border: none;
+  outline: none;
+  padding: 0 .325em;
+  z-index: 1;
+}
+// custom button
+.btncus {
+    height: 50px;
+    text-align: center;
+    width: 150px;
+    cursor: pointer;
+    border-radius: 25px;
+    border-color: #2d655d;
+}
+.btncus-outline-primary {
+  color: #2d655d;
+}
+.btncus-outline-primary:focus, .btncus-outline-primary.focus {
+  box-shadow: 0 0 0 0.1rem rgb(45, 101, 93);
+  color: #fff;
+  background-color: #2d655d;
+  border-color: #2b625b;
+  
+}
+.btncus:focus, .btncus.focus {
+  outline: 0;
+}
+.btncus-outline-primary:hover {
+  color: #fff;
+  background-color: #2d655d;
+  border-color: #2b625b;
+}
+.btncus-outline-primary:active {
+  color: #fff;
+  background-color: #2d655d;
+  border-color: #2b625b;
+}
+
+//Passport
+.cell-number {
+	margin-top: -23px;
+    margin-left: -16px;
+	display: block;
+	margin: 0 px;
+	border: none !important;
+	padding: 0;
+	width: 15.5ch;
+	text-transform: uppercase;
+	background: repeating-linear-gradient(90deg, dimgrey 0, dimgrey 1ch, transparent 0, transparent 1.5ch) 0 100%/ 15ch 2px no-repeat;
+	font: 4ch droid sans mono, consolas, monospace;
+	letter-spacing: 0.5ch;
+}
+.pincode {
+	margin-top: -17px !important;
+    margin-left: -17px !important;
+	color: #2c645d;;
+	display: block;
+	margin: auto;
+	border: none;
+	padding: 0px;
+	text-transform: uppercase;
+	background: repeating-linear-gradient(90deg, dimgrey 0, dimgrey 1ch, transparent 0, transparent 1.5ch) 0 100%/9ch 1px no-repeat;
+	font: 3ch droid sans mono, consolas, monospace;
+	letter-spacing: 0.5ch;
+}
+.input-cus{
+  background: #eae7e7;
+  border:none;
+  outline:none;
+  display:inline-block;
+  height:34px;
+  vertical-align:middle;
+  position:relative;
+  bottom:14px;
+  right:9px;
+  border-radius:22px;
+  width:220px;
+  box-sizing:border-box;
+  padding:0 18px; 
+}
+.input-cus[type="button"]{ 
+    background: rgb(42, 96, 89) !important;
+    color:#fff;
+    position:relative;
+    top:25px; 
+    width:100px;
+    cursor:pointer;
+}
+//select box
+.box {
+  margin-left: -10px !important;
+  margin-top: -12px !important;
+  margin-bottom: 10px;
+  border: none;
+  border-radius:36px;
+  display:inline-block;
+  overflow:hidden;
+}
+.box select {
+  background-color: #eae7e7;
+  color: #000000;
+  text-indent: 12px;
+  padding: 12px;
+  height: 34px;
+  width: 222px;
+  border: none;
+  font-size: 16px;
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+}
+.box:hover::before {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.box select option {
+  padding: 30px;
+}
+.icone-right {
+	color: #2c645d;;
+	text-align: right;
+	padding-right: 13px;
+	bottom: 6px;
+}
+.icone-left {
+	color: #ab333e;
+	text-align:left;
+	padding-left: 0px;
+	top: -11px;
+}
+//error
+.error {
+  color: brown;
+  font-size: 65px;
+  padding-left: 1px;
+}
+
+
+
+  

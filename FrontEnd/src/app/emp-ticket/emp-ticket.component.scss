@@ -1,0 +1,102 @@
+.img{
+ width: 40px;
+}
+.content {
+    width: 100%;
+    max-width: 95%;
+}
+.btncus {
+    height: 36px;
+    width: 105px;
+    border-radius: 0px;
+}
+.icon {
+    text-align: right;
+    padding-right: 1px;
+    margin-top: 9px;
+    font-size: 20px;
+}
+.input-cus {
+    position: unset;
+    width: 200px;
+}
+.box {
+    margin-left: 5px !important;
+    margin-top: -1px !important;
+}
+.box select {
+    width: 113px;
+}
+.style4 {
+	border-top: 1px dotted #2a625b;
+}
+.boarding-pass {
+	//@include center;
+	width: 350px;
+	height: 382px;
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0 5px 30px rgba(0, 0, 0, .2);
+	overflow: hidden;
+	text-transform: uppercase;
+	small {
+	  display: block;
+	  font-size: 11px;
+	  color: #A2A9B3;
+	  margin-bottom: 2px;
+	}
+	strong {
+	  font-size: 15px;
+	  display: block;
+	}
+	/*--------------------
+	Cities
+	--------------------*/
+	.cities {
+		color: black;
+	  position: relative;
+	  &::after {
+		content: '';
+		display: table;
+		clear: both;
+	  }
+	  .city {
+		padding: 20px 18px;
+		float: left;
+		&:nth-child(2) {
+		  float: right;
+		}
+		strong {
+		  font-size: 40px;
+		  font-weight: 300;
+		  line-height: 1;
+		}
+		small {
+		  margin-bottom: 0px;
+		  margin-left: 3px;
+		}
+	  }
+	  .airplane {
+		position: absolute;
+		width: 30px;
+		height: 25px;
+		top: 57%;
+		left: 30%;
+		opacity: 0;
+		transform: translate(-50%, -50%);
+		animation: move 3s infinite;
+	  }
+	  @keyframes move {
+		40% {
+		  left: 50%;
+		  opacity: 1;
+		}
+		100% {
+		  left: 70%;
+		  opacity: 0;
+		}
+	  }
+	}
+}
+
+
