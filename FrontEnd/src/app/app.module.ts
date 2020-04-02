@@ -15,6 +15,7 @@ import { MyTestPageComponent } from './my-test-page/my-test-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SupperAdminDashboardComponent } from './supper-admin-dashboard/supper-admin-dashboard.component';
 import { SupperAdminRegComponent } from './supper-admin-reg/supper-admin-reg.component';
+import { UserInfoListComponent } from './user-info-list/user-info-list.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { SupperAdminRegComponent } from './supper-admin-reg/supper-admin-reg.com
     EmpDetailComponent,
     MyTestPageComponent,
     SupperAdminDashboardComponent,
-    SupperAdminRegComponent
+    SupperAdminRegComponent,
+    UserInfoListComponent
   ],
   imports: [
     BrowserModule,

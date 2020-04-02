@@ -11,6 +11,7 @@ import { EmpDetailComponent } from './emp-detail/emp-detail.component';
 import { MyTestPageComponent } from './my-test-page/my-test-page.component';
 import { SupperAdminDashboardComponent } from './supper-admin-dashboard/supper-admin-dashboard.component';
 import { SupperAdminRegComponent } from './supper-admin-reg/supper-admin-reg.component';
+import { UserInfoListComponent } from './user-info-list/user-info-list.component';
 
 
 const routes: Routes = [
@@ -27,10 +28,11 @@ const routes: Routes = [
     {path: 'visa', component: EmpVisaComponent},
     {path: 'detail', component: EmpDetailComponent}
   ]},
-  {path:'super/admin', component: SuperAdminComponent,
+  {path: 'super/admin', component: SuperAdminComponent,
   children : [
     {path: 'dashboard', component: SupperAdminDashboardComponent},
-    {path: 'reg', component: SupperAdminRegComponent}
+    {path: 'reg', component: SupperAdminRegComponent},
+    {path: 'user/:id', component: UserInfoListComponent}
   ]}
 ];
 
