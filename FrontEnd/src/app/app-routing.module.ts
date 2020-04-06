@@ -16,28 +16,32 @@ import { UserInfoListComponent } from './user-info-list/user-info-list.component
 
 const routes: Routes = [
   //{ path:'logIn', component: LoginComponent },
-  { path:'test', component: MyTestPageComponent },
+  { path: 'test', component: MyTestPageComponent },
   // {path:'create/user', component: CreateUserInfoComponent},
-  {path:'create/:id', component: CreateUserInfoComponent},
-  {path:'', redirectTo:'create/user',pathMatch:'full'},
-  {path:'emp/screen', component: EmpScreenComponent, 
-  children: [
-    {path: 'xerox', component: EmpXeroxComponent},
-    {path: 'passport', component: EmpPassportComponent},
-    {path: 'ticket', component: EmpTicketComponent},
-    {path: 'visa', component: EmpVisaComponent},
-    {path: 'detail', component: EmpDetailComponent}
-  ]},
-  {path: 'super/admin', component: SuperAdminComponent,
-  children : [
-    {path: 'dashboard', component: SupperAdminDashboardComponent},
-    {path: 'reg', component: SupperAdminRegComponent},
-    {path: 'user/:id', component: UserInfoListComponent}
-  ]}
+  { path: 'create/:id', component: CreateUserInfoComponent },
+  { path: '', redirectTo: 'create/user', pathMatch: 'full' },
+  {
+    path: 'emp/screen', component: EmpScreenComponent,
+    children: [
+      { path: 'xerox', component: EmpXeroxComponent },
+      { path: 'passport', component: EmpPassportComponent },
+      { path: 'ticket', component: EmpTicketComponent },
+      { path: 'visa', component: EmpVisaComponent },
+      { path: 'detail', component: EmpDetailComponent }
+    ]
+  },
+  {
+    path: 'super/admin', component: SuperAdminComponent,
+    children: [
+      { path: 'dashboard', component: SupperAdminDashboardComponent },
+      { path: 'reg', component: SupperAdminRegComponent },
+      { path: 'user/:id', component: UserInfoListComponent }
+    ]
+  }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled' })],
+  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
