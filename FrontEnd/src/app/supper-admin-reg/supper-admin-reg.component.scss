@@ -21,7 +21,8 @@ img {
 .arrow {
     padding: 2px 9px;
     font-size: 25px;
-    background: #daa7a75e;
+    background: #00000021;
+    color: white;
     border-radius: 50%;
 }
 
@@ -52,3 +53,7 @@ img {
   color: whitesmoke;
 }
 
+.scroll {
+  height: 100vh;
+  overflow-y: scroll;
+}
