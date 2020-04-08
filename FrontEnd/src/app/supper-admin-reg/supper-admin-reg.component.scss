@@ -9,6 +9,15 @@ img {
     margin-left: 70px;
     width: fit-content;
 }
+.blink_me {
+    animation: blinker 1s linear infinite;
+    color: #96535c;
+  }
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
 .arrow {
     padding: 2px 9px;
     font-size: 25px;
@@ -30,4 +39,16 @@ img {
     right: 77px;
 }
 
+.test {
+    position: relative;
+    width: 160px;
+    height: 153px;
+    background-color: black;
+}
+.circle {
+    position: absolute;
+    top: 59px;
+    left: 59px;
+  color: whitesmoke;
+}
 

@@ -28,7 +28,7 @@ export class SupperAdminDashboardComponent implements OnInit {
       year: '2003',
       ticket: 2,
       visa: 1,
-      user: 60,
+      user: 45,
       // "lamerica": 1.2,
       // "meast": 0.2,
       // "africa": 0.1
