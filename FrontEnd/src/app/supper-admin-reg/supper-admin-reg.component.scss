@@ -9,6 +9,11 @@ img {
     margin-left: 70px;
     width: fit-content;
 }
+
+.arrow-right {
+  top: 31px;
+  left: 29px;
+}
 .blink_me {
     animation: blinker 1s linear infinite;
     color: #96535c;
@@ -19,7 +24,7 @@ img {
     }
   }
 .arrow {
-    padding: 2px 9px;
+    padding: 9px 12px;
     font-size: 25px;
     background: #00000021;
     color: white;
@@ -28,9 +33,13 @@ img {
 
 .arrow-postion {
     position: relative;
-    right: 21px;
+    right: 28px;
     z-index: 2;
     margin-top: 90px;
+}
+.arrow-left {
+  top: 30px;
+  right: 6px;
 }
 .pic {
     width: 118px;
