@@ -25,26 +25,98 @@ export class SupperAdminDashboardComponent implements OnInit {
     const chart = am4core.create('chartdiv', am4charts.XYChart);
     // Add data
     chart.data = [{
-      year: '2003',
-      ticket: 2,
+      year: 'Jan',
+      ticket: 5,
       visa: 1,
-      user: 45,
+      passport: 50,
       // "lamerica": 1.2,
       // "meast": 0.2,
       // "africa": 0.1
     }, {
-      year: '2004',
-      ticket: 3,
+      year: 'Jeb',
+      ticket: 6,
       visa: 2,
-      user: 50,
+      passport: 100,
       // "lamerica": 1.3,
       // "meast": 0.3,
       // "africa": 0.1
     }, {
-      year: '2005',
+      year: 'Mar',
       ticket: 4,
       visa: 1,
-      user: 60,
+      passport: 60,
+      // "lamerica": 1.4,
+      // "meast": 0.3,
+      // "africa": 0.1
+    },{
+      year: 'Apr',
+      ticket: 7,
+      visa: 1,
+      passport: 80,
+      // "lamerica": 1.4,
+      // "meast": 0.3,
+      // "africa": 0.1
+    },{
+      year: 'May',
+      ticket: 8,
+      visa: 1,
+      passport: 150,
+      // "lamerica": 1.4,
+      // "meast": 0.3,
+      // "africa": 0.1
+    },{
+      year: 'Jun',
+      ticket: 8,
+      visa: 1,
+      passport: 150,
+      // "lamerica": 1.4,
+      // "meast": 0.3,
+      // "africa": 0.1
+    },{
+      year: 'Jul',
+      ticket: 8,
+      visa: 1,
+      passport: 150,
+      // "lamerica": 1.4,
+      // "meast": 0.3,
+      // "africa": 0.1
+    },{
+      year: 'Aug',
+      ticket: 8,
+      visa: 1,
+      passport: 150,
+      // "lamerica": 1.4,
+      // "meast": 0.3,
+      // "africa": 0.1
+    },{
+      year: 'Sep',
+      ticket: 8,
+      visa: 1,
+      passport: 650,
+      // "lamerica": 1.4,
+      // "meast": 0.3,
+      // "africa": 0.1
+    },{
+      year: 'Oct',
+      ticket: 8,
+      visa: 1,
+      passport: 150,
+      // "lamerica": 1.4,
+      // "meast": 0.3,
+      // "africa": 0.1
+    },{
+      year: 'Nov',
+      ticket: 8,
+      visa: 1,
+      passport: 150,
+      // "lamerica": 1.4,
+      // "meast": 0.3,
+      // "africa": 0.1
+    },{
+      year: 'Dec',
+      ticket: 12,
+      visa: 6,
+      passport: 240,
       // "lamerica": 1.4,
       // "meast": 0.3,
       // "africa": 0.1
@@ -60,7 +132,7 @@ export class SupperAdminDashboardComponent implements OnInit {
     categoryAxis.renderer.grid.template.disabled = true;
     const valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
     valueAxis.min = 0;
-    // valueAxis.title.text = "Expenditure (M)";
+    valueAxis.title.text = "DASHBOARD (2020)";
     // Create series
     function createSeries(field, name, stacked) {
       const series = chart.series.push(new am4charts.ColumnSeries());
@@ -71,9 +143,9 @@ export class SupperAdminDashboardComponent implements OnInit {
       series.stacked = stacked;
       series.columns.template.width = am4core.percent(95);
     }
-    createSeries('ticket', 'Ticket', false);
-    createSeries('visa', 'Visa', false);
-    createSeries('user', 'User', false);
+    createSeries('ticket', 'Ticket', true);
+    createSeries('visa', 'Visa', true);
+    createSeries('passport', 'Passport', true);
     // createSeries("lamerica", "Latin America", true);
     // createSeries("meast", "Middle East", true);
     // createSeries("africa", "Africa", true);

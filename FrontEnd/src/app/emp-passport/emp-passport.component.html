@@ -147,38 +147,63 @@
         </div>
       </form>
     </div>
-  </div>
-  
-  <div class="content">
-      <strong>Notes</strong>
-      <ul>
-      <li>Passport application can be processed at any PSK/POPSK/PSLK WITHIN INDIA irrespective of your residential address.</li>
-          <li>Please Fill <code>all mandatory</code> fields <code><span class="icofont-warning"></span></code>.</li>
-      </ul>
-  </div>
-
-
-
-  <button type="button" #demomodel class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong" style="display: none;">
-    Launch demo modal
-  </button> 
-  
-  <div class="modal" id="exampleModalLong"  tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">{{cus.firstName}}</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p>Modal body text goes here.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Save changes</button>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
+</div>
+<div class="content">
+    <strong>Notes</strong>
+    <ul>
+    <li>Passport application can be processed at any PSK/POPSK/PSLK WITHIN INDIA irrespective of your residential address.</li>
+        <li>Please Fill <code>all mandatory</code> fields <code><span class="icofont-warning"></span></code>.</li>
+    </ul>
+</div>
+<button type="button" #demomodel class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong" style="display: none;">
+  Launch demo modal
+</button> 
+<div class="modal" id="exampleModalLong"  tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{{cus.firstName}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
+</div>
+ <!-- TOAST Message -->
+<div>
+  <div style="height: 0px;" class="position-absolute w-25" style="top: 55px; right: 2px;">
+      <div class="scroll">
+          <div class="toast fade show toast ml-auto">
+              <div class="toast-header">
+                  <strong class="mr-auto" style="color: #2a6059;"><i class="icofont-transparent"></i>CUS876354656</strong>
+                  <small class="text-muted">55 minutes ago</small>
+                  <button type="button" class="ml-0 mb-0 close" style="font-size: 19px; outline: none;" data-dismiss="toast"><i class="icofont-arrow-right"></i></button>
+              </div>
+              <div class="row toast-body">
+                  <div class="col-lg-8" style="color:#6c757d">Mohamed Ashraf Ali</div>
+                  <div class="col-lg-4 text-right blink_me" style="color:#295f58">Approved</div>
+              </div>
+          </div>
+          <div class="toast fade show toast ml-auto">
+            <div class="toast-header">
+                <strong class="mr-auto" style="color: #2a6059;"><i class="icofont-transparent"></i>CUS876354656</strong>
+                <small class="text-muted">55 minutes ago</small>
+                <button type="button" class="ml-0 mb-0 close" style="font-size: 19px; outline: none;" data-dismiss="toast"><i class="icofont-arrow-right"></i></button>
+            </div>
+            <div class="row toast-body">
+                <div class="col-lg-8" style="color:#6c757d">Paramasivam</div>
+                <div class="col-lg-4 text-right blink_me" style="color:#295f58">Approved</div>
+            </div>
+        </div>
+          
+      </div>
+  </div>
+</div>

@@ -4,25 +4,16 @@
 img {
     width: 100%;
 }
+//CUSTOME CADE
 .card-view {
     margin: 20px;
     margin-left: 70px;
     width: fit-content;
 }
-
 .arrow-right {
   top: 31px;
   left: 29px;
 }
-.blink_me {
-    animation: blinker 1s linear infinite;
-    color: #96535c;
-  }
-  @keyframes blinker {
-    50% {
-      opacity: 0;
-    }
-  }
 .arrow {
     padding: 9px 12px;
     font-size: 25px;
@@ -30,7 +21,6 @@ img {
     color: white;
     border-radius: 50%;
 }
-
 .arrow-postion {
     position: relative;
     right: 28px;
@@ -47,22 +37,4 @@ img {
     background-color: gray;
     position: relative;
     right: 77px;
-}
-
-.test {
-    position: relative;
-    width: 160px;
-    height: 153px;
-    background-color: black;
-}
-.circle {
-    position: absolute;
-    top: 59px;
-    left: 59px;
-  color: whitesmoke;
-}
-
-.scroll {
-  height: calc(100vh - 56px);
-  overflow-y: scroll;
 }

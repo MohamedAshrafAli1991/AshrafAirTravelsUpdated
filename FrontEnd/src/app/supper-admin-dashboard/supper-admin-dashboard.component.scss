@@ -1,8 +1,23 @@
+.content {
+    width: 100%;
+    max-width: 100%;
+}
 #chartdiv {	
     //width		: 75%;
      height		: 400px;
      background-color: #fff;  
- }
+}
+.scroll {
+	height: calc(100vh - 56px);
+	overflow-y: scroll;
+}
+.table {
+    width: 100%;
+    margin-bottom: 0rem;
+    color: #212529;
+}
+
+//Extra Background Animation
  .area{
      //background: #4e54c8;  
      //background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  

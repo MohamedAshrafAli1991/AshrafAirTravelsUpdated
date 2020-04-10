@@ -20,3 +20,21 @@
 	top: -11px;
 }
 
+//TOAST
+.scroll {
+	height: calc(100vh - 56px);
+	overflow-y: scroll;
+  }
+.blink_me {
+    animation: blinker 1s linear infinite;
+    color: #96535c;
+  }
+.toast {
+  max-width: 285px;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
