@@ -12,13 +12,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./supper-admin-dashboard.component.scss']
 })
 export class SupperAdminDashboardComponent implements OnInit {
-
+  percentage: number;
   constructor(private router: Router) {
     am4core.useTheme(am4themes_spiritedaway);
     am4core.useTheme(am4themes_animated);
   }
 
   ngOnInit() {
+    this.percentage = 80;
     this.test();
   }
   test() {
