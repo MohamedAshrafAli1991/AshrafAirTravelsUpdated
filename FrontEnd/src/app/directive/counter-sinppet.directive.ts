@@ -12,14 +12,11 @@ export class CounterSinppetDirective implements AfterViewInit {
     let value = defaultValue || 0;
     value = Number(value);
     let increment = 0;
-    let timer = 60;
-    if (value > 200) {
-      timer = 0;
-    } else if (value > 100) {
-      timer = 5;
-    } else if (value > 50) {
-      timer = 10;
+    let range = value;
+    if (range === 0) {
+      range = 1;
     }
+    const timer = Math.abs(Math.floor(5000 / range));
     setInterval(() => {
       if (value === increment) {
         clearInterval();

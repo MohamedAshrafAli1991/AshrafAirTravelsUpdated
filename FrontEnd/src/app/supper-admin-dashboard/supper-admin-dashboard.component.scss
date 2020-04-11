@@ -11,6 +11,11 @@
 	height: calc(100vh - 56px);
 	overflow-y: scroll;
 }
+.progress-animate {
+    width: 0px;
+    transition: width 3s;
+    transition-timing-function: ease-in-out;
+}
 .table {
     width: 100%;
     margin-bottom: 0rem;

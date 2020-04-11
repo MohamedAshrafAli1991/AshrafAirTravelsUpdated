@@ -5,7 +5,7 @@
                 <div class="card">
                     <div class="card-body p-0 pb-1">
                         <h5 class="card-title text-center">Special title treatment</h5>
-                        <p class="card-text text-center" appCounterSinppet>20</p>
+                        <p class="card-text text-center" appCounterSinppet>5000</p>
                         <div class="text-center">
                             <a href="#" class="btn btn-primary text-center">Flowz</a>
                         </div>
@@ -17,7 +17,7 @@
                 <div class="card">
                     <div class="card-body p-0 pb-1">
                         <h5 class="card-title text-center">Special title treatment</h5>
-                        <p class="card-text text-center" appCounterSinppet>48</p>
+                        <p class="card-text text-center" appCounterSinppet>3000</p>
                         <div class="text-center">
                             <a href="#" class="btn btn-primary text-center">Flowz</a>
                         </div>
@@ -29,7 +29,7 @@
                 <div class="card">
                     <div class="card-body p-0 pb-1">
                         <h5 class="card-title text-center">Special title treatment</h5>
-                        <p class="card-text text-center" appCounterSinppet>101</p>
+                        <p class="card-text text-center" appCounterSinppet>100</p>
                         <div class="text-center">
                             <a href="#" class="btn btn-primary text-center">Flowz</a>
                         </div>
@@ -49,9 +49,9 @@
                         <h2 class="font-light m-b-0"><i class="ti-arrow-up text-success"></i> $120</h2>
                         <span class="text-muted">Todays Income</span>
                     </div>
-                    <span class="text-success">80%</span>
+                    <span class="text-success">70%</span>
                     <div class="progress h-auto">
-                        <div class="progress-bar bg-success" role="progressbar" style="width: 80%; height: 6px;"
+                        <div class="progress-bar bg-success progress-animate" role="progressbar"  [ngStyle]="{'width': '70%' }"style="height: 6px;"
                             aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
@@ -67,7 +67,7 @@
                     </div>
                     <span class="text-info">{{percentage}}%</span>
                     <div class="progress h-auto">
-                        <div class="progress-bar bg-info" role="progressbar"
+                        <div class="progress-bar progress-animate bg-info" role="progressbar"
                             [ngStyle]="{'width': percentage ? percentage + '%' : 0 + '%'}"
                             style="width: 30%; height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
                         </div>
