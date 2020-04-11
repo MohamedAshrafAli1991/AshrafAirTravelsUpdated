@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SupperAdminDashboardComponent } from './supper-admin-dashboard/supper-admin-dashboard.component';
 import { SupperAdminRegComponent } from './supper-admin-reg/supper-admin-reg.component';
 import { UserInfoListComponent } from './user-info-list/user-info-list.component';
+import { CounterSinppetDirective } from './directive/counter-sinppet.directive';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { UserInfoListComponent } from './user-info-list/user-info-list.component
     MyTestPageComponent,
     SupperAdminDashboardComponent,
     SupperAdminRegComponent,
-    UserInfoListComponent
+    UserInfoListComponent,
+    CounterSinppetDirective
   ],
   imports: [
     BrowserModule,
