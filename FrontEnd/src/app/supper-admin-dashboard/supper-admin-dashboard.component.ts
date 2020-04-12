@@ -19,8 +19,9 @@ export class SupperAdminDashboardComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.percentage = 80;
+    this.percentage = 100;
     this.test();
+    this.testTwo();
   }
   test() {
     const chart = am4core.create('chartdiv', am4charts.XYChart);
@@ -133,7 +134,7 @@ export class SupperAdminDashboardComponent implements OnInit {
     categoryAxis.renderer.grid.template.disabled = true;
     const valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
     valueAxis.min = 0;
-    valueAxis.title.text = "DASHBOARD (2020)";
+    valueAxis.title.text = "DASHBOARD (2019)";
     // Create series
     function createSeries(field, name, stacked) {
       const series = chart.series.push(new am4charts.ColumnSeries());
@@ -144,13 +145,62 @@ export class SupperAdminDashboardComponent implements OnInit {
       series.stacked = stacked;
       series.columns.template.width = am4core.percent(95);
     }
-    createSeries('ticket', 'Ticket', true);
-    createSeries('visa', 'Visa', true);
-    createSeries('passport', 'Passport', true);
+    createSeries('ticket', 'Ticket', false);
+    createSeries('visa', 'Visa', false);
+    createSeries('passport', 'Passport', false);
     // createSeries("lamerica", "Latin America", true);
     // createSeries("meast", "Middle East", true);
     // createSeries("africa", "Africa", true);
     // Add legend
     chart.legend = new am4charts.Legend();
   }
+
+testTwo() {
+  let chart = am4core.create("chartdivTwo", am4charts.XYChart);
+
+// Add data
+chart.data = [{
+  "date": new Date(2018, 3, 20),
+  "value": 90
+}, {
+  "date": new Date(2018, 3, 21),
+  "value": 102
+}, {
+  "date": new Date(2018, 3, 22),
+  "value": 65
+}, {
+  "date": new Date(2018, 3, 23),
+  "value": 62
+}, {
+  "date": new Date(2018, 3, 24),
+  "value": 55
+}, {
+  "date": new Date(2018, 3, 25),
+  "value": 81
+}];
+
+// Create axes
+let dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+
+// Create value axis
+let valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+
+// Create series
+let lineSeries = chart.series.push(new am4charts.LineSeries());
+lineSeries.dataFields.valueY = "value";
+lineSeries.dataFields.dateX = "date";
+lineSeries.name = "Sales";
+lineSeries.strokeWidth = 0.5;
+
+// Add simple bullet
+let bullet = lineSeries.bullets.push(new am4charts.Bullet());
+let image = bullet.createChild(am4core.Image);
+image.href = "https://www.amcharts.com/lib/images/weather/animated/day.svg";
+image.width = 30;
+image.height = 30;
+image.horizontalCenter = "middle";
+image.verticalCenter = "middle";
+
+}
+
 }

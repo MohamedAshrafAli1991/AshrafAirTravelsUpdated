@@ -2,25 +2,36 @@
     width: 100%;
     max-width: 100%;
 }
-#chartdiv {	
-    //width		: 75%;
-     height		: 400px;
+#chartdiv { 
+    //width     : 75%;
+     height     : 400px;
+     background-color: #fff;  
+}
+#chartdivTwo {  
+    //width     : 75%;
+     height     : 300px;
      background-color: #fff;  
 }
 .scroll {
-	height: calc(100vh - 56px);
-	overflow-y: scroll;
-}
-.progress-animate {
-    width: 0px;
-    transition: width 3s;
-    transition-timing-function: ease-in-out;
+    height: calc(100vh - 56px);
+    overflow-y: scroll;
 }
 .table {
     width: 100%;
     margin-bottom: 0rem;
     color: #212529;
 }
+//Progress Bar Animation 
+.progress-value {
+    //animation: load 5s normal forwards;
+    width: 0px;
+    transition: width 5s;
+    transition-timing-function: ease-in-out;
+  }
+//   @keyframes load {
+//     0% { width: 0; }
+//     100% { width: 68%; }
+//   }
 
 //Extra Background Animation
  .area{
@@ -125,4 +136,3 @@
      }
  
  }
- 
