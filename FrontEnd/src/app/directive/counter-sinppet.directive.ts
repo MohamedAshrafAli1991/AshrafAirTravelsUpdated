@@ -17,9 +17,9 @@ export class CounterSinppetDirective implements AfterViewInit {
       range = 1;
     }
     const timer = Math.abs(Math.floor(5000 / range));
-    setInterval(() => {
+    const a = setInterval(() => {
       if (value === increment) {
-        clearInterval();
+        clearInterval(a);
         this.elem.nativeElement.textContent = defaultValue;
       } else {
         increment++;
