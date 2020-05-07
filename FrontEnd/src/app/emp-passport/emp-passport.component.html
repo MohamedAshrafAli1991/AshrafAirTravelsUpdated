@@ -155,25 +155,120 @@
         <li>Please Fill <code>all mandatory</code> fields <code><span class="icofont-warning"></span></code>.</li>
     </ul>
 </div>
+
+
 <button type="button" #demomodel class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong" style="display: none;">
   Launch demo modal
 </button> 
 <div class="modal" id="exampleModalLong"  tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">{{cus.firstName}}</h5>
+    <div class="modal-content"> 
+      <!-- <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
+      </div> -->
       <div class="modal-body">
-        <p>Modal body text goes here.</p>
+        <div class="row">
+          <div class="card front">
+              <div class="blue"></div>
+              <div class="yellow"></div>
+              <div class="pink"></div>
+              <div class="dots"></div>
+              <div class="personal-intro">
+                  <div class="row">
+                      <div class="col-6"></div>
+                      <div class="col-6 text-right">
+                          <img src="assets/img/ashraf.png">
+                      </div>
+                  </div>
+                  <br>
+                  <div class="ribbon">
+                      <span class="ribbon3">CUS5678965432 / APPROVED / 12-JAN-20 / FRESH / PAID&nbsp;</span>
+                  </div>
+                  <div class="ribbon-one">
+                      <span class="ribbon3">MOHAMEDASHRAFALI</span>
+                  </div>
+                  <div class="ribbon-two">
+                      <span class="ribbon3">ASHRAF123</span>
+                  </div>
+                  <!-- <div class="test">
+                      <svg width="132" height="132">
+                          <circle cx="66" cy="66" r="65" fill="none" stroke="#ffff" stroke-width="2" />
+                          <circle cx="66" cy="66" r="65" fill="none" stroke="#ffff" stroke-width="2" />
+                          <circle cx="66" cy="66" r="48" fill="none" stroke="#ffff" stroke-width="1" />
+                          <circle cx="66" cy="66" r="46" fill="none" stroke="#ffff" stroke-width="1" />
+                          <defs>
+                            <path id="text-path" d="M66 126A60 60 0 1 0 66 6a60 60 0 0 0 0 120" fill="none"/>
+                          </defs>
+                          <text dominant-baseline="middle" text-anchor="middle" x="50%" y="51%" font-family="Manrope3-ExtraBold, Manrope3" font-size="50" font-weight="100" fill="none" stroke="#ffff" stroke-width="2" >Paid</text>
+                          <text>
+                            <textPath xlink:href="#text-path" font-family="Manrope3-ExtraBold, Manrope3" font-size="10" font-weight="600" fill="#ffff" letter-spacing="2.14">•DOWNLOAD LATEST VERSION•MANROPE FONT FAMILY</textPath>
+                        </text>
+                        </svg>
+                  </div> -->
+                  <div class="row">
+                      <div class="col-6 text-right"><small>Cell :</small></div>
+                      <div class="col-6 text-left p-0"><p>9566340416</p></div>
+                  </div>
+                  <div class="row">
+                      <div class="col-6 text-right"><small>Given Name :</small></div>
+                      <div class="col-6 text-left p-0"><p>Mohamed Ashraf Ali</p></div>
+                  </div>
+                  <div class="row">
+                      <div class="col-6 text-right"><small>Surname :</small></div>
+                      <div class="col-6 text-left p-0"><p>Liyagath Ali</p></div>
+                  </div>
+                  <div class="row">
+                      <div class="col-6 text-right"><small>Mother Name :</small></div>
+                      <div class="col-6 text-left p-0"><p>Mahabunisha</p></div>
+                  </div>
+                  <div class="row">
+                      <div class="col-6 text-right"><small>Spouse Name :</small></div>
+                      <div class="col-6 text-left p-0"><p>Gowhar Jahan</p></div>
+                  </div>
+                  <div class="row">
+                      <div class="col-6 text-right"><small>Gender :</small></div>
+                      <div class="col-6 text-left p-0"><p>Male</p></div>
+                  </div>
+                  <div class="row">
+                      <div class="col-6 text-right"><small>Qualification :</small></div>
+                      <div class="col-6 text-left p-0"><p>12</p></div>
+                  </div>
+                  <div class="row">
+                      <div class="col-6 text-right"><small>Aadhaar :</small></div>
+                      <div class="col-6 text-left p-0"><p>8765-4567-89</p></div>
+                  </div>
+                  <div class="row">
+                      <div class="col-6 text-right"><small>Voit Id :</small></div>
+                      <div class="col-6 text-left p-0"><p>ZX1234567</p></div>
+                  </div>
+                  <div class="row">
+                      <div class="col-6 text-right"><small>Police Station :</small></div>
+                      <div class="col-6 text-left p-0"><p>Ulundrpet</p></div>
+                  </div>
+                  <div class="row">
+                      <div class="col-6 text-right"><small>Address :</small></div>
+                      <div class="col-6 text-left p-0"><p>No.61 / g Kaitha Millath Street, Ulundurpet Taluk, Villupuram District</p></div>
+                  </div>
+                  <div class="row">
+                      <div class="col-6 text-right"><small>Pin Code :</small></div>
+                      <div class="col-6 text-left p-0"><p>606107</p></div>
+                  </div>
+                  <div class="row">
+                      <div class="col-6 text-right"><small>State :</small></div>
+                      <div class="col-6 text-left p-0"><p>Tamil Nadu</p></div>
+                  </div>
+                  <div class="btn-position-cus">
+                  <button class="btncus btncus-outline-primary">Process to pay</button>
+              </div> 
+              </div>
+            </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Save changes</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
+      <!-- <div class="modal-footer">
+        <button class="btncus btncus-outline-primary">Process to pay</button>
+      </div> -->
     </div>
   </div>
 </div>
@@ -203,7 +298,6 @@
                 <div class="col-lg-4 text-right blink_me" style="color:#295f58">Approved</div>
             </div>
         </div>
-          
       </div>
   </div>
 </div>

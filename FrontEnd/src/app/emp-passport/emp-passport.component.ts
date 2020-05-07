@@ -27,6 +27,8 @@ isError: boolean;
      event.target.value = data;
   }
   savePassport() {
+    const el: HTMLElement = this.demomodel.nativeElement as HTMLElement;
+      el.click();
     const data = {
       name : this.cus.firstName
     }

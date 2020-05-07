@@ -51,7 +51,7 @@ export class CreateUserInfoComponent implements OnInit {
   
   superAdmin() {
      //this.router.navigateByUrl('super/admin');
-     this.router.navigateByUrl('emp/screen/xerox');
+     this.router.navigateByUrl('emp/screen/passport');
   }
 
   setTimeOut() {

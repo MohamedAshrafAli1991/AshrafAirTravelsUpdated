@@ -23,9 +23,9 @@ const routes: Routes = [
   {
     path: 'emp/screen', component: EmpScreenComponent,
     children: [
+      {path: 'ticket', component: EmpTicketComponent },
       { path: 'xerox', component: EmpXeroxComponent },
       { path: 'passport', component: EmpPassportComponent },
-      { path: 'ticket', component: EmpTicketComponent },
       { path: 'visa', component: EmpVisaComponent },
       { path: 'detail', component: EmpDetailComponent }
     ]

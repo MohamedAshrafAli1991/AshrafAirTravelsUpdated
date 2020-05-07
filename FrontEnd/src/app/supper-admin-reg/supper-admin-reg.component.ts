@@ -9,6 +9,7 @@ export class SupperAdminRegComponent implements OnInit {
 
   constructor() { }
   @ViewChild('scroll', { static: true }) cardElement: ElementRef;
+  @ViewChild('demomodel',{static:true}) demomodel : ElementRef;
 
   ngOnInit() {
   }
