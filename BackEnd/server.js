@@ -6,6 +6,7 @@ const cors = require('cors');
 //Models
 const Role = require('./models/roles');
 const User = require('./models/user');
+const TestData = require('./models/TestData');
 
 const app = express();
 
@@ -68,6 +69,45 @@ app.get('/api/user/:token', (req, res) => {
         res.send(user);
     });
 });
+
+app.post('/api/testData', (req, res) => {
+    const data = req.body;
+
+    const testData = new TestData(data);
+     testData.save((error, data) => {
+         if(error) {
+             console.log(error);
+             res.send({success: false, message: "Error saving data"})
+         }
+         res.send({success: true, data: testData});
+     });
+});
+
+app.get('/api/testData', (req, res) => {
+    
+    const data = TestData.find((err, user) => {
+        if(err){
+            console.log(err);
+        }
+        console.log(user);
+        res.send(user);
+    });
+});
+
+app.get('/api/testData/:customerId', (req, res) => {
+    const id = req.params.CustomerId;
+    
+    const data = TestData.find({CustomerId: id}, (err, user) => {
+        if(err){
+            console.log(err);
+            res.send({success: false, message: 'No Record Found'});
+        }
+        console.log(user);
+        res.send({success: true, data});
+    });
+});
+
+
 
 //Server
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
