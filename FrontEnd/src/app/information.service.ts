@@ -7,24 +7,55 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class InformationService {
-
-  // data = [
-  //   {
-  //     userName:'wow', 
-  //     role: 'admin',
-  //     token:'MOHAMEDASH'
-  //   },
-  //   {
-  //     userName:'wow', 
-  //     role: 'emp',
-  //     token:'EMPONE'
-  //   }
-  // ] 
-
   constructor( private http : HttpClient) { }
-
-  
+  invoiceData: any;
   tokenInfoTable(token) {
     return this.http.get(`${environment.baseUrl}/api/user/${token}`).toPromise();
+  }
+
+  getCusInvoice () {
+    this.invoiceData = [
+      {id: 0, date: "01-Jan-20", type:"Passport", amount:1400, lose: true},
+      {id: 1, date: "12-Feb-20", type:"Ticket", amount:1200, lose: false},
+      {id: 2, date: "25-Aug-20", type:"Visa", amount:6000, lose: true},
+      {id: 3, date: "12-Oct-20", type:"Pan", amount:300, lose: true},
+      {id: 1, date: "12-Feb-20", type:"Ticket", amount:1200, lose: false},
+      {id: 2, date: "25-Aug-20", type:"Visa", amount:6000, lose: true},
+      {id: 3, date: "12-Oct-20", type:"Pan", amount:300, lose: true},
+      {id: 2, date: "25-Aug-20", type:"Visa", amount:6000, lose: true},
+      {id: 3, date: "12-Oct-20", type:"Pan", amount:300, lose: true},
+    ];
+    return this.invoiceData;
+  }
+  getAdminAllCusInfo () {
+    this.invoiceData = [
+      {empId: "EMP-01", empName:"Ashraf", customerName:"Salim", date: "01-Jan-20", type:"Passport", amount:1400, lose: true},
+      {empId: "EMP-12", empName:"Liyagath", customerName:"Mohamed Ashraf ALi", date: "12-Feb-20", type:"Ticket", amount:1200, lose: false},
+      {empId: "EMP-19", empName:"Ashraf", customerName:"Rahul", date: "25-Aug-20", type:"Visa", amount:6000, lose: true}
+    ];
+    return this.invoiceData;
+  }
+  getAdminCusInvoice () {
+    this.invoiceData = [
+      {customerName:"Salim", date: "01-Jan", type:"Passport", amount:1400, expense:1200, profit:600, percentege: 56, status:"Processing"},
+      {customerName:"Mohamed Ashraf ALi", date: "12-Jan", type:"Ticket", amount:1200, expense:1200, profit:650, percentege: 51},
+      {customerName:"Rahul", date: "25-Jan", type:"Visa", amount:6000, expense:1200, profit:680, percentege: 90},
+      {customerName:"Salim", date: "01-Jan", type:"Passport", amount:1400, expense:1200, profit:400, percentege: 10, status:"documentPending"},
+      {customerName:"Mohamed Ashraf ALi", date: "12-Jan", type:"Ticket", amount:1200, expense:1200, profit:500, percentege: 7},
+      {customerName:"Rahul", date: "25-Jan", type:"Visa", amount:6000, expense:1200, profit:1300, percentege: 20},
+      {customerName:"Salim", date: "01-Jan", type:"Passport", amount:1400, expense:1200, profit:3100, percentege: 40},
+      {customerName:"Mohamed Ashraf ALi", date: "12-Jan", type:"Ticket", amount:1200, expense:1200, profit:1800, percentege: 49},
+      {customerName:"Rahul", date: "25-Jan", type:"Visa", amount:1200, expense:1200, profit:0, percentege: 0},
+      {customerName:"Salim", date: "01-Jan", type:"Passport", amount:1400, expense:1200, profit:1000, percentege: 56},
+      {customerName:"Mohamed Ashraf ALi", date: "12-Jan", type:"Ticket", amount:1200, expense:1200, profit:1600, percentege: 51},
+      {customerName:"Rahul", date: "25-Jan", type:"Visa", amount:6000, expense:1200, profit:3810, percentege: 90},
+      {customerName:"Salim", date: "01-Jan", type:"Passport", amount:1400, expense:1200, profit:4010, percentege: 10},
+      {customerName:"Mohamed Ashraf ALi", date: "12-Jan", type:"Ticket", amount:1200, expense:1200, profit:0, percentege: 0},
+      {customerName:"Rahul", date: "25-Jan", type:"Visa", amount:6000, expense:1200, profit:100, percentege: 20},
+      {customerName:"Salim", date: "01-Jan", type:"Passport", amount:1400, expense:1200, profit:300, percentege: 40},
+      {customerName:"Mohamed Ashraf ALi", date: "12-Jan", type:"Ticket", amount:1200, expense:1200, profit:800, percentege: 49},
+      {customerName:"Rahul", date: "25-Jan", type:"Visa", amount:1200, expense:1200, profit:700, percentege: 80}
+    ];
+    return this.invoiceData;
   }
 }

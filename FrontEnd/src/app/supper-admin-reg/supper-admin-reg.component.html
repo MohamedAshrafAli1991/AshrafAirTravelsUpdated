@@ -1,56 +1,67 @@
- <div>
-    <div class="row">
-      <div class="card front">
-          <div class="blue"></div>
-          <div class="yellow"></div>
-          <div class="pink"></div>
-          <div class="dots"></div>
-          <div class="personal-intro">
+<div class="">
+  <div class="row">
+    <h1> Report</h1>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <div class="content">
+          <div *ngFor="let invoice of invoiceData">
+            <button class="button" style="margin-top: 12px; width: 100%;" (click)="getId()">
               <div class="row">
-                  <div class="col-6"></div>
-                  <div class="col-6 text-right">
-                      <img src="assets/img/ashraf.png">
-                  </div>
+                <div class="col-3">{{invoice.date}}</div>
+                <div class="col-5">{{id}}</div>
+                <div class="col-3 p-0">{{invoice.amount | currency:'INR' :'symbol':'1.0'}}</div>
+                <div class="col-1"><span class="shift">›</span></div>
+                <!-- {{id}} &nbsp; &nbsp;{{invoice.date}}&nbsp; &nbsp;{{invoice.amount | currency:'INR' :'symbol':'1.0'}}&nbsp;<span class="shift">›</span> -->
               </div>
-              <br>
-              <div class="ribbon">
-                  <span class="ribbon3">CUS5678965432 / APPROVED / 12-JAN-20 / FRESH / PAID&nbsp;</span>
-              </div>
-              <div class="row">
-                <div class="col-12">
-                  <div class="inner-card">
-                    <table class="table table-bordered">
-                      <thead>
-                        <tr>
-                          <th colspan="3" >Invoice</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td >12-JAN-20</td>
-                          <td >Ticket</td>
-                          <td>$340</td>
-                        </tr>
-                        <tr>
-                          <td >12-JAN-20</td>
-                          <td >Passport</td>
-                          <td>$1200</td>
-                        </tr>
-                        <tr>
-                          <td >12-JAN-20</td>
-                          <td >Passport</td>
-                          <td>$360</td>
-                        </tr>
-                        <tr>
-                          <td colspan="2"></td>
-                          <td>$360</td>
-                        </tr>
-                      </tbody>
-                    </table>
+              <div class="mask"></div>
+            </button>
+          </div>
+      </div>
+    </div>
+    <div class="col-6">
+          <div class="card front">
+            <div class="blue"></div>
+            <div class="yellow"></div>
+            <div class="pink"></div>
+            <div class="dots"></div>
+            <div class="personal-intro">
+                <div class="row">
+                    <div class="col-6"></div>
+                    <div class="col-6 text-right">
+                        <img class="img-cus" src="assets/img/ashraf.png">
+                    </div>
+                </div>
+                <br>
+                <div class="ribbon">
+                    <span class="ribbon3">{{id}} / MOHAMED ASHRAF ALI&nbsp;</span>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="inner-card table-wrapper-scroll-y my-custom-scrollbar">
+                      <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                            <th colspan="3" >Invoice</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let invoice of invoiceData" class="{{invoice.lose ?  ' ' : 'danger'}} ">
+                            <td >{{invoice.date}}</td>
+                            <td >{{invoice.type}}</td>
+                            <td>{{invoice.amount | currency:'INR' :'symbol':'1.0'}}</td>
+                          </tr>
+                          <tr class="total-row">
+                            <td colspan="2"></td>
+                            <td class="p-0">{{total | currency:'INR' :'symbol':'1.0'}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
                 </div>
-              </div>
+            </div>
           </div>
-        </div>
+    </div>
   </div>
 </div>

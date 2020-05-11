@@ -10,10 +10,12 @@ const User = require('./models/user');
 const app = express();
 
 //variables
-const PORT = process.env.PORT || 5000;
-const DB_STRING = process.env.DB_CONNECTION_STRING;
+const PORT =  5001;
+const DB_STRING = "mongodb+srv://ashraf:ashraf_12345@cluster0-3tnrv.mongodb.net/ashraf_air_travels?retryWrites=true&w=majority";
 
 //DB Connection
+debugger;
+console.log('---------->',DB_STRING);
 mongoose.connect(DB_STRING, { useNewUrlParser: true,  useUnifiedTopology: true}, (err)=> {if(err) {console.log(err)} console.log(`MongoDB Connected`)});
 
 //middlewares

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { InformationService } from '../information.service';
 import { Router } from '@angular/router';
+import { AppSettingService } from '../service/app-setting.service';
 
 @Component({
   selector: 'app-create-user-info',
@@ -14,11 +15,16 @@ export class CreateUserInfoComponent implements OnInit {
   isCount: boolean;
   isDisabled: boolean;
   data: any;
+  today: string;
 
-
-  constructor(private info: InformationService, private router: Router) { }
+  constructor(private info: InformationService, 
+              private router: Router, 
+              private setting : AppSettingService) { }
 
  ngOnInit() {
+  var today = new Date();
+  var str = today.toString();
+  this.setting.empId = 'CUS'+ (str.split(" ",4).join('').toUpperCase()) + 'ASH' + '2';
  }
   
   async userToken(event) {
