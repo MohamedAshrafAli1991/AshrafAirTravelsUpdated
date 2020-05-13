@@ -17,18 +17,42 @@ export class SupperAdminRegComponent implements OnInit {
   id: string;
   data: any;
   test: number;
+  spinner: boolean;
+  searchValue: string;
+  isActive: boolean;
+  dataArr: any;
   
   ngOnInit() {
     this.test = 1300;
     this.id = this.setting.empId;
     const data = this.infoService.getCusInvoice();
+    this.dataArr = data;
     const reducer = (accumulator, currentValue) => accumulator + currentValue.amount;
     this.invoiceData = data;
     this.total = this.invoiceData.reduce(reducer, 0);
   } 
 
   getId() {
-    alert('Hai');
+    this.spinner = true;
+    setTimeout(() => {
+      this.spinner = false;
+    }, 2000);
+  }
+
+  searchItem() {
+    this.isActive = false;
+    if(this.searchValue) {
+      this.isActive = true;
+    }
+  }
+
+  testsss() {
+    if(this.searchValue) {
+      this.isActive = true;
+        this.invoiceData =  this.dataArr.filter((el) => {
+          return el.type.includes(this.searchValue);
+        });
+    }
   }
 
 }

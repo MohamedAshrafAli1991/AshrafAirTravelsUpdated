@@ -8,14 +8,32 @@
   width: 100%;
   max-width: 96%;
 }
+
+//spinner
+.spinner {
+  margin-top: 25%;
+  margin-bottom: 25%;
+}
+.spinner-border {
+  color: #2b605a;
+}
+
+//Scroll
+.table-wrapper-scroll-y {
+  display: block;
+}
+.my-custom-scrollbar-right {
+  position: relative;
+  height: 89vh;
+  overflow: auto;
+}
 .my-custom-scrollbar {
   position: relative;
   height: 75vh;
   overflow: auto;
 }
-.table-wrapper-scroll-y {
-  display: block;
-}
+
+//This Page Css
 .card {
   width: 96%;
 }
@@ -24,6 +42,8 @@
   margin-bottom: 2%;
   background: #bfbfbfe8;
   color: white;
+  margin-left: -46px;
+  margin-right: -46px;
 }
 .modal-content {
   pointer-events: auto;
@@ -50,6 +70,7 @@ td {
   border: 1px solid #dee2e6;
   font-size: 35px;
 }
+
 .danger {
   background-color: #5d1004fc;
   color: aliceblue;
@@ -59,10 +80,7 @@ td {
   color: aliceblue;
 }
 
-p {
-  margin-top: 0;
-  margin-bottom: 0rem;
-}
+//Row Button
 .button {
   border-radius: 12px;
 	border: 1px solid #2e2e2e;
@@ -115,3 +133,74 @@ p {
 .button:active div {
   color: darkred;
 }
+
+
+//Search Bar 
+.form{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  transition: all 1s;
+  width: 50px;
+  height: 50px;
+  background: white;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 4px solid white;
+  padding: 5px;
+}
+input{
+  position: absolute;
+  color: #2a615a;
+  font-weight: 200;
+  top: 0;
+  left: 0;
+  width: 100%;;
+  height: 42.5px;
+  line-height: 30px;
+  outline: 0;
+  border: 0;
+  display: none;
+  font-size: 2em;
+  border-radius: 20px;
+  padding: 0 20px;
+}
+.fa{
+  box-sizing: border-box;
+  padding: 10px;
+  width: 42.5px;
+  height: 42.5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  color: #2d6760;
+  text-align: center;
+  font-size: 1.2em;
+  transition: all 1s;
+}
+.form:hover{
+  width: 300px;
+  cursor: pointer;
+}
+.form:hover input{
+  display: block;
+}
+.form:hover .fa{
+  background:#2d6760;
+  color: white;
+}
+.form-active{
+  width: 300px;
+  cursor: pointer;
+}
+.form-active .fa{
+  background:#2d6760;
+  color: white;
+}
+.form-active input{
+  display: block;
+}
+
+

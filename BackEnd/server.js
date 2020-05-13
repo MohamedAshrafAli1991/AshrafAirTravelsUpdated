@@ -11,8 +11,8 @@ const TestData = require('./models/TestData');
 const app = express();
 
 //variables
-const PORT =  5001;
-const DB_STRING = "mongodb+srv://ashraf:ashraf_12345@cluster0-3tnrv.mongodb.net/ashraf_air_travels?retryWrites=true&w=majority";
+const PORT =  process.env.PORT;
+const DB_STRING = process.env.DB_CONNECTION_STRING;
 
 //DB Connection
 debugger;
