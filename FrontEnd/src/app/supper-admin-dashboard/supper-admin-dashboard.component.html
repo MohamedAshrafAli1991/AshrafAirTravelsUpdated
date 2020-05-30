@@ -1,76 +1,80 @@
 <h2 class="heading-right">Dashboard</h2>
-    <div class="content">
-        <div class="mx-5">
-            <div class="row mx-4">
-                <div class="col-sm-3">
-                    <div class="card">
-                        <div class="p-2">
-                            <h4 class="card-title text-muted">Daily Sales</h4>
-                            <div class="text-right">
-                                <h3 class="font-light m-b-0 text-info"><span appCounterSinppet>149</span></h3>
-                                <span class="text-muted">Target<span class="p-1 text-info">1456</span> Income.</span>
-                            </div>
-                            <span class="text-info">{{dailyPercentage}}%</span>
-                            <div class="progress h-auto">
-                                <div class="progress-bar bg-info progress-value" role="progressbar"
-                                    [ngStyle]="{'width': dailyPercentage ? dailyPercentage + '%' : 0 + '%'}"
-                                    style="width: 30%; height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                </div>
+<div class="row">
+    <div class="col-12">
+        <h2 style="text-align:center; margin-bottom: 1px; margin-top: 10px; color: #2a625b;">Dashboard</h2>
+    </div>
+</div>
+<div class="content">
+    <div class="mx-5">
+        <div class="row mx-4">
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="p-2">
+                        <h4 class="card-title text-muted">Daily Sales</h4>
+                        <div class="text-right">
+                            <h3 class="font-light m-b-0 text-info"><span appCounterSinppet>149</span></h3>
+                            <span class="text-muted">Target<span class="p-1 text-info">1456</span> Income.</span>
+                        </div>
+                        <span class="text-info">{{dailyPercentage}}%</span>
+                        <div class="progress h-auto">
+                            <div class="progress-bar bg-info progress-value" role="progressbar"
+                                [ngStyle]="{'width': dailyPercentage ? dailyPercentage + '%' : 0 + '%'}"
+                                style="width: 30%; height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-3">
-                    <div class="card">
-                        <div class="p-2">
-                            <h4 class="card-title text-muted">Weekly Sales</h4>
-                            <div class="text-right">
-                                <h2 class="font-light m-b-0 text-info"><span appCounterSinppet>340</span></h2>
-                                <span class="text-muted">Weekly Income.</span>
-                            </div>
-                            <span class="text-info">{{weeklyPercentage}}%</span>
-                            <div class="progress h-auto">
-                                <div class="progress-bar bg-info progress-value" role="progressbar"
-                                    [ngStyle]="{'width': weeklyPercentage ? weeklyPercentage + '%' : 0 + '%'}"
-                                    style="width: 30%; height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="p-2">
+                        <h4 class="card-title text-muted">Weekly Sales</h4>
+                        <div class="text-right">
+                            <h2 class="font-light m-b-0 text-info"><span appCounterSinppet>340</span></h2>
+                            <span class="text-muted">Weekly Income.</span>
+                        </div>
+                        <span class="text-info">{{weeklyPercentage}}%</span>
+                        <div class="progress h-auto">
+                            <div class="progress-bar bg-info progress-value" role="progressbar"
+                                [ngStyle]="{'width': weeklyPercentage ? weeklyPercentage + '%' : 0 + '%'}"
+                                style="width: 30%; height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-3">
-                    <div class="card">
-                        <div class="p-2">
-                            <h4 class="card-title text-muted">Monthly Sales</h4>
-                            <div class="text-right">
-                                <!-- <h2 class="font-light m-b-0"><i class="ti-arrow-up text-info"></i> 500</h2> -->
-                                <h2 class="font-light m-b-0 text-info" appCounterSinppet>120</h2>
-                                <span class="text-muted">Monthly Income.</span>
-                            </div>
-                            <span class="text-info">{{yearlyPercentage}}%</span>
-                            <div class="progress h-auto">
-                                <div class="progress-bar bg-info progress-value" role="progressbar"
-                                    [ngStyle]="{'width': yearlyPercentage ? yearlyPercentage + '%' : 0 + '%'}"
-                                    style="width: 30%; height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="p-2">
+                        <h4 class="card-title text-muted">Monthly Sales</h4>
+                        <div class="text-right">
+                            <!-- <h2 class="font-light m-b-0"><i class="ti-arrow-up text-info"></i> 500</h2> -->
+                            <h2 class="font-light m-b-0 text-info" appCounterSinppet>120</h2>
+                            <span class="text-muted">Monthly Income.</span>
+                        </div>
+                        <span class="text-info">{{yearlyPercentage}}%</span>
+                        <div class="progress h-auto">
+                            <div class="progress-bar bg-info progress-value" role="progressbar"
+                                [ngStyle]="{'width': yearlyPercentage ? yearlyPercentage + '%' : 0 + '%'}"
+                                style="width: 30%; height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-3">
-                    <div class="card">
-                        <div class="p-2">
-                            <h4 class="card-title text-muted">Pending Report</h4>
-                            <div class="text-right">
-                                <h2 class="font-light m-b-0 text-info-cus"><span class="icofont-swoosh-down"></span><span appCounterSinppet>67</span></h2>
-                                <span class="text-muted">Daily Income.</span>
-                            </div>
-                            <span class="text-info-cus">{{dailyPercentage}}%</span>
-                            <div class="progress h-auto">
-                                <div class="progress-bar-cus  progress-value" role="progressbar"
-                                    [ngStyle]="{'width': dailyPercentage ? dailyPercentage + '%' : 0 + '%'}"
-                                    style="width: 30%; height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="p-2">
+                        <h4 class="card-title text-muted">Pending Report</h4>
+                        <div class="text-right">
+                            <h2 class="font-light m-b-0 text-info-cus"><span class="icofont-swoosh-down"></span><span appCounterSinppet>67</span></h2>
+                            <span class="text-muted">Daily Income.</span>
+                        </div>
+                        <span class="text-info-cus">{{dailyPercentage}}%</span>
+                        <div class="progress h-auto">
+                            <div class="progress-bar-cus  progress-value" role="progressbar"
+                                [ngStyle]="{'width': dailyPercentage ? dailyPercentage + '%' : 0 + '%'}"
+                                style="width: 30%; height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
                             </div>
                         </div>
                     </div>
@@ -78,33 +82,36 @@
             </div>
         </div>
     </div>
-    <div class="content">
-        <div class="row">
-            <div class="col-sm-10">
-                <div id="chartdiv"></div>
-            </div>
-            <div class="col-sm-2">
-                    <div class="card">
-                        <div class="p-4">
-                            <div class="text-center">
-                                <h4 class="card-title text-muted icofont-ui-user-group icofont-2"></h4 >
-                                <h2 class="font-light m-b-0" style="color:#2b635d;"appCounterSinppet>20</h2>
-                                <span class="text-muted">Active Brokers</span>
-                            </div>
+</div>
+<div class="content">
+    <div class="row">
+        <div class="col-sm-10">
+            <div id="chartdiv"></div>
+        </div>
+        <div class="col-sm-2">
+                <div class="card">
+                    <div class="p-4">
+                        <div class="text-center">
+                            <h4 class="card-title text-muted icofont-ui-user-group icofont-2"></h4 >
+                            <h2 class="font-light m-b-0" style="color:#2b635d;"appCounterSinppet>20</h2>
+                            <span class="text-muted">Active Brokers</span>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="p-4">
-                            <div class="text-center">
-                                <h4 class="card-title text-muted icofont-ui-user-group icofont-2x"></h4>
-                                <h2 class="font-light m-b-0" style="color: darkred;"appCounterSinppet>90</h2>
-                                <span class="text-muted">Inactive Brokers</span>
-                            </div>
+                </div>
+                <div class="card">
+                    <div class="p-4">
+                        <div class="text-center">
+                            <h4 class="card-title text-muted icofont-ui-user-group icofont-2x"></h4>
+                            <h2 class="font-light m-b-0" style="color: darkred;"appCounterSinppet>90</h2>
+                            <span class="text-muted">Inactive Brokers</span>
                         </div>
                     </div>
-            </div>
+                </div>
         </div>
     </div>
+</div>
+    
+    
    
 
    

@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const connectDB = require('./config/db');
+const TestData = require('./models/TestData');
 
 //Loading env variables
 dotenv.config({ path: './config/.env' });
@@ -81,29 +82,27 @@ process.on('unhandledRejection', (err, promise) => {
 //     });
 // });
 
-// app.post('/api/testData', (req, res) => {
-//     const data = req.body;
+app.post('/api/testData', (req, res) => {
+    const data = req.body;
 
-//     const testData = new TestData(data);
-//      testData.save((error, data) => {
-//          if(error) {
-//              console.log(error);
-//              res.send({success: false, message: "Error saving data"})
-//          }
-//          res.send({success: true, data: testData});
-//      });
-// });
+    const testData = new TestData(data);
+     testData.save((error, data) => {
+         if(error) {
+             console.log(error);
+             res.send({success: false, message: "Error saving data"})
+         }
+         res.send({success: true, data: testData});
+     });
+});
 
-// app.get('/api/testData', (req, res) => {
-
-//     const data = TestData.find((err, user) => {
-//         if(err){
-//             console.log(err);
-//         }
-//         console.log(user);
-//         res.send(user);
-//     });
-// });
+app.get('/api/testData', (req, res) => {
+    const data = TestData.find((err, user) => {
+        if(err){
+            console.log(err);
+        }
+        res.send(user);
+    });
+});
 
 // app.get('/api/testData/:customerId', (req, res) => {
 //     const id = req.params.CustomerId;

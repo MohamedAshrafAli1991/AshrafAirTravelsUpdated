@@ -1,0 +1,81 @@
+<div class="">
+    <div class="row">
+      <div class="col-5">
+        <div class="content table-wrapper-scroll-y my-custom-scrollbar-right" style="border: 0.9px dotted #80808059;">
+          <div class="row">
+            <div class="col-4">
+              <h2 style="text-align:right; margin-bottom: 1px;">Details</h2>
+            </div>
+            <div class="col-8 text-right">
+              <div class="form" [ngClass]="{'form-active': isActive}">
+                <input class="search-input" type="search" [(ngModel)]="searchValue" (focusout)="activeClass()"(input)="searchItem($event)"/>
+                <i class="fa icofont-search-user"></i>
+              </div>
+            </div>
+            
+          </div>
+            <div *ngFor="let invoice of invoiceData">
+              <button class="button" style="margin-top: 12px; width: 100%;" (click)="getId()">
+                <div class="row">
+                  <div class="col-2"></div>
+                  <div class="col-6">{{invoice.customerId}}</div>
+                  <div class="col-4"><span class="shift">›</span></div>
+                </div>
+                <div class="mask"></div>
+              </button>
+            </div>
+        </div>
+      </div>
+      <div class="col-7">
+            <div class="card front">
+              <div class="blue"></div>
+              <div class="yellow"></div>
+              <div class="pink"></div>
+              <div class="dots"></div>
+              <div class="personal-intro">
+                <div class="text-center spinner" *ngIf="spinner">
+                  <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                  </div>
+                </div>
+                <div *ngIf="!spinner">
+                  <div class="row">
+                    <div class="col-6"></div>
+                    <div class="col-6 text-right">
+                        <img class="img-cus" src="assets/img/ashraf.png">
+                    </div>
+                </div>
+                <br>
+                <div class="ribbon">
+                    <span class="ribbon3">{{id}} / MOHAMED ASHRAF ALI&nbsp;</span>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="inner-card table-wrapper-scroll-y my-custom-scrollbar">
+                      <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                            <th colspan="3" >Invoice</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let invoice of dataArr" class="{{invoice.document == 'invalid' ?  'danger' : ''}} ">
+                            <td >{{invoice.date | date }}</td>
+                            <td >{{invoice.type}}</td>
+                            <td>{{invoice.amount | currency:'INR' :'symbol':'1.0'}}</td>
+                          </tr>
+                          <tr class="total-row">
+                            <td colspan="2"></td>
+                            <td class="p-0">{{total | currency:'INR' :'symbol':'1.0'}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+      </div>
+    </div>
+</div>

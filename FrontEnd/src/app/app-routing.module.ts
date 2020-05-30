@@ -12,6 +12,7 @@ import { MyTestPageComponent } from './my-test-page/my-test-page.component';
 import { SupperAdminDashboardComponent } from './supper-admin-dashboard/supper-admin-dashboard.component';
 import { SupperAdminRegComponent } from './supper-admin-reg/supper-admin-reg.component';
 import { UserInfoListComponent } from './user-info-list/user-info-list.component';
+import { SuperAdminReportComponent } from './super-admin-report/super-admin-report.component';
 
 
 const routes: Routes = [
@@ -35,6 +36,7 @@ const routes: Routes = [
     children: [
       { path: 'dashboard', component: SupperAdminDashboardComponent },
       { path: 'reg', component: SupperAdminRegComponent },
+      { path: 'report', component: SuperAdminReportComponent },
       { path: 'user/:id', component: UserInfoListComponent }
     ]
   }

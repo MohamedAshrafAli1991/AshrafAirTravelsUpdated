@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { AppSettingService } from '../service/app-setting.service';
 import { InformationService } from '../information.service';
+import { getLocaleDateFormat } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-supper-admin-reg',
@@ -8,51 +10,71 @@ import { InformationService } from '../information.service';
   styleUrls: ['./supper-admin-reg.component.scss']
 })
 export class SupperAdminRegComponent implements OnInit {
-  constructor(private setting: AppSettingService,
-    private infoService: InformationService) { }
-  @ViewChild('scroll', { static: true }) cardElement: ElementRef;
+  @ViewChild('f', { static: true }) f: any;
   @ViewChild('demomodel',{static:true}) demomodel : ElementRef;
-  invoiceData : any; 
-  total: number;
-  id: string;
-  data: any;
-  test: number;
-  spinner: boolean;
-  searchValue: string;
-  isActive: boolean;
-  dataArr: any;
+  cus = {cell:'',role:'customer',name:'',amount:''};
+  isValid: boolean;
+
+  constructor(private setting: AppSettingService,
+    private infoService: InformationService,
+    private router: Router) { }
   
   ngOnInit() {
-    this.test = 1300;
-    this.id = this.setting.empId;
-    const data = this.infoService.getCusInvoice();
-    this.dataArr = data;
-    const reducer = (accumulator, currentValue) => accumulator + currentValue.amount;
-    this.invoiceData = data;
-    this.total = this.invoiceData.reduce(reducer, 0);
   } 
-
-  getId() {
-    this.spinner = true;
-    setTimeout(() => {
-      this.spinner = false;
-    }, 2000);
+  
+  pay() {
+    this.router.navigateByUrl('test');
   }
+  onSubmit() {
+    // if(this.f.valid) {
+    //   const el: HTMLElement = this.demomodel.nativeElement as HTMLElement;
+    //   el.click();
+    // }
+    // let temp = {
+    //   customerName:"Parama",
+    //   customerId: "CUSMONMAY112020PMO2",
+    //   date: "2020-01-02",
+    //   type:"pan",
+    //   amount: 1000,
+    //   expense: 500,
+    //   profit: 300,
+    //   percentage: 100,
+    //   status: "approved",
+    //   tsActive:true,
+    //   role:"customer",
+    //   phone:"9566340416",
+    //   document:"valid"
+    //}
+    if(this.f.valid) {
+      let dateObj  = new Date();
+      let month = dateObj.getUTCMonth() + 1; //months from 1-12
+      let day = dateObj.getUTCDate();
+      let year = dateObj.getUTCFullYear();
+      let dateString = year + '-' + month + '-' + day;
 
-  searchItem() {
-    this.isActive = false;
-    if(this.searchValue) {
-      this.isActive = true;
+       //console.log(dateString);
+       let vlaue = this.f.value;
+       let temp = {
+        customerName: vlaue.name,
+        customerId: "CUSMONMAY112020PMO2",
+        date: dateString,
+        type:"pan",
+        amount: vlaue.amount,
+        expense: 500,
+        profit: 300,
+        percentage: 100,
+        status: "approved",
+        tsActive:true,
+        role: vlaue.role,
+        phone: vlaue.cell,
+        document:"valid"
+      }
+      console.log(temp);
+      this.infoService.getAdminService(temp).then(res => {
+        console.log(res);
+      });
     }
   }
 
-  testsss() {
-    if(this.searchValue) {
-      this.isActive = true;
-        this.invoiceData =  this.dataArr.filter((el) => {
-          return el.type.includes(this.searchValue);
-        });
-    }
-  }
 
 }

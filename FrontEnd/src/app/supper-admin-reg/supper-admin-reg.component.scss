@@ -1,206 +1,55 @@
+
 .content {
-  background-color: #f4f4f4;
-  border-radius: 8px;
-  box-sizing: border-box;
-  line-height: 1.4em;
-  margin: 19px auto;
-  padding: 20px;
-  width: 100%;
-  max-width: 96%;
+    margin-top: 10px;
+}
+.cell-number:focus{
+	outline-offset: -50px !important;
+}
+.input-lable {
+	text-align:left;
+	padding-left: 0px;
+}
+.iphone-icone {
+	color:#2c645d;;
+	text-align: right;
+	padding-right: 1px;
+	bottom: 10px;
+	font-size: 31px;
+}
+.icone-left-special {
+	margin-top: 6px;
+	color: #ab333e;
+	text-align:left;
+	padding-left: 0px;
+	top: -11px;
 }
 
-//spinner
-.spinner {
-  margin-top: 25%;
-  margin-bottom: 25%;
-}
-.spinner-border {
-  color: #2b605a;
-}
-
-//Scroll
-.table-wrapper-scroll-y {
-  display: block;
-}
-.my-custom-scrollbar-right {
-  position: relative;
-  height: 89vh;
-  overflow: auto;
-}
-.my-custom-scrollbar {
-  position: relative;
-  height: 75vh;
-  overflow: auto;
-}
-
-//This Page Css
-.card {
-  width: 96%;
-}
-.front .personal-intro {
-  margin-top: 2%;
-  margin-bottom: 2%;
-  background: #bfbfbfe8;
-  color: white;
-  margin-left: -46px;
-  margin-right: -46px;
-}
-.modal-content {
-  pointer-events: auto;
-  background-color: #ffffff14;
-  background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.3rem;
-  outline: 0;
+// Special - card
+  .card {
+      width: 55%;
+  }
+  .front .personal-intro {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    background: #000000ab;
+    color: white;
+  }
+  .btn-position-cus {
+    position: absolute;
+    bottom: -8%;
+    margin-left: 41%;
+    white-space: nowrap;
+  }
+  .modal-content {
+    pointer-events: auto;
+    background-color: #ffffff14;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+    outline: 0;
 }
 .modal-dialog {
     max-width: 100% !important;
     margin: 1.75rem auto;
 }
-
-//
-.inner-card {
-  padding: 10px 10px 10px;
-  width: 100%;
-}
-td {
-  border: 0px solid #dee2e6;
-}
-.total-row {
-  border: 1px solid #dee2e6;
-  font-size: 35px;
-}
-
-.danger {
-  background-color: #5d1004fc;
-  color: aliceblue;
-}
-.cool {
-  background-color: #2b605a;
-  color: aliceblue;
-}
-
-//Row Button
-.button {
-  border-radius: 12px;
-	border: 1px solid #2e2e2e;
-	cursor: pointer;
-	letter-spacing: 0.2125rem;
-	overflow: hidden;
-	padding: 15px 30px;
-	position: relative;
-	text-align: center;
-	text-transform: uppercase;
-	transition: 
-		background 5s cubic-bezier(0.19, 1, 0.22, 1),
-		border 1s cubic-bezier(0.19, 1, 0.22, 1),
-		color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-  user-select: none;
-  outline: none;
-}
-.button div {
-	color: #969696;
-	font-family: "Varela Round";
-	text-decoration: none;
-}
-.button .mask {
-	background-color: #8fadab;
-	height: 100px;
-	position: absolute;
-	transform: translate3d(-120%, -50px, 0) rotate3d(0, 0, 1, 45deg);
-	transition: all 1.1s cubic-bezier(0.19, 1, 0.22, 1);
-	width: 500px;
-}
-.button .shift {
-	display: inline-block;
-	transition: all 1.1s cubic-bezier(0.19, 1, 0.22, 1);
-}
-.button:hover {
-	background-color: rgba(255, 255, 255, 0.05);
-	border-color: rgba(43, 96, 90, 0.9);
-	transition: background 0s;
-}
-.button:hover div {
-	color: #295e58fa;
-}
-.button:hover .mask {
-	background-color: rgba(43, 96, 90, 0.9);
-	transform: translate3d(120%, -100px, 0) rotate3d(0, 0, 1, 90deg);
-}
-.button:hover .shift {
-	transform: translateX(20px);
-}
-.button:active div {
-  color: darkred;
-}
-
-
-//Search Bar 
-.form{
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  transition: all 1s;
-  width: 50px;
-  height: 50px;
-  background: white;
-  box-sizing: border-box;
-  border-radius: 25px;
-  border: 4px solid white;
-  padding: 5px;
-}
-input{
-  position: absolute;
-  color: #2a615a;
-  font-weight: 200;
-  top: 0;
-  left: 0;
-  width: 100%;;
-  height: 42.5px;
-  line-height: 30px;
-  outline: 0;
-  border: 0;
-  display: none;
-  font-size: 2em;
-  border-radius: 20px;
-  padding: 0 20px;
-}
-.fa{
-  box-sizing: border-box;
-  padding: 10px;
-  width: 42.5px;
-  height: 42.5px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  border-radius: 50%;
-  color: #2d6760;
-  text-align: center;
-  font-size: 1.2em;
-  transition: all 1s;
-}
-.form:hover{
-  width: 300px;
-  cursor: pointer;
-}
-.form:hover input{
-  display: block;
-}
-.form:hover .fa{
-  background:#2d6760;
-  color: white;
-}
-.form-active{
-  width: 300px;
-  cursor: pointer;
-}
-.form-active .fa{
-  background:#2d6760;
-  color: white;
-}
-.form-active input{
-  display: block;
-}
-
-
+  

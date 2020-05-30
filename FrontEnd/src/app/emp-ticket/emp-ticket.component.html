@@ -1,83 +1,116 @@
 <h1 class="heading-right">Ticket</h1>
-<div class="content">
-    <div class="row">
-        <div class="row">
-            <div class="col-1 icofont-ui-flight icon"></div>
-            <div class="col-1">
-                <input class="input-cus"  type="text"  placeholder="From"/>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-1 icofont-ui-flight icon"></div>
-            <div class="col-1">
-                <input class="input-cus" type="text"  placeholder="To"/>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-1 icofont-calendar icon"></div>
-            <div class="col-1">
-                <input class="input-cus" type="date"  placeholder="Date"/>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-1 icofont-calendar icon"></div>
-            <div class="col-1">
-                <input class="input-cus" type="date"  placeholder="Date"/>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-1 icofont-ui-user icon"></div>
-            <div class="col-1">
-                <div class="box">
-                    <select name="genter">
-                      <option value="single">1</option>
-                      <option value="married">2</option>
-                    </select>
-                  </div>
-            </div>
-        </div>
-        
-        <div class="col-2">
-            <button class="btncus btncus-outline-primary">Search</button>
+<div class="row">
+  <div class="col-6">
+    <div class="content" style="border: 0.9px dotted #80808059;">
+      <div class="row" style="margin-bottom: 15px;">
+        <div class="col-12 text-center"><h1>Ticket</h1></div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-4 icofont-ui-flight text-right icon"></div>
+        <div class="col-6"><input class="input-cus"  type="text"  placeholder="From"/></div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-4 icofont-ui-flight text-right icon"></div>
+        <div class="col-6"><input class="input-cus" type="text"  placeholder="To"/></div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-4 icofont-calendar text-right icon"></div>
+        <div class="col-6"><input class="input-cus" type="date"  placeholder="Date"/></div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-4 icofont-phone-circle text-right icon"></div>
+        <div class="col-6"><input class="input-cus"  type="number"  value="9442477040" disabled/></div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-4 icofont-transparent text-right icon"></div>
+        <div class="col-6"><input class="input-cus" type="text"  value="CUS23456789" disabled/></div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-12 text-center">
+          <button class="btncus btncus-outline-primary" (click)="ticketPay()">Pay</button>
         </div>
       </div>
-</div>
-
-<div class="content boarding-pass">
-	<div class="row">
-		<img src="assets/img/ashraf.png" style="width: 18%;margin-left: 247px;">
-	</div>
-	<div class="cities">
-	  <div class="city">
-		<small>Roma</small>
-		<strong>FCO</strong>
-	  </div>
-	  <div class="city">
-		<small>Napoli</small>
-		<strong>NAP</strong>
-	  </div>
-	  <svg class="airplane">
-		<use xlink:href="#airplane"></use>
-	  </svg>
-	</div>
-	<div class="style4">
-	</div>
-	<div class="cities">
-		<div class="city">
-		  <small>DATE</small>
-		  <strong>12/10/2020</strong>
-		</div>
-	  </div>
-	<div class="style4">
-	</div>
-	<div class="row">
-		<img src="../../assets/img/barcode_PNG7.png" style="margin-top: 8px;margin-left: 54px;height: 61px;">
-	</div>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="content boarding-pass" style="margin-left: 1px;">
+      <div class="row text-right">
+        <img src="assets/img/ashraf.png" style="width: 18%;margin-left: 247px;">
+      </div>
+      <div class="cities">
+        <div class="city">
+          <small>Napoli</small>
+        <strong>FCO</strong>
+        </div>
+        <div class="city">
+        <small>Napoli</small>
+        <strong>NAP</strong>
+        </div>
+        <svg class="airplane">
+        <use xlink:href="#airplane"></use>
+        </svg>
+      </div>
+      <div class="style4">
+      </div>
+      <div class="cities">
+        <div class="city">
+          <small>DATE</small>
+          <strong>12/10/2020</strong>
+        </div>
+        </div>
+      <div class="style4">
+      </div>
+      <div class="row">
+        <img src="../../assets/img/barcode_PNG7.png" style="margin-top: 8px;margin-left: 54px;height: 61px;">
+      </div>
+    </div>
+  </div>
+  <div class="col-3">
+  </div>
 </div>
 <svg >
 	<symbol  id="airplane" viewBox="243.5 245.183 25 21.633"><g><path fill="#2c655e" d="M251.966,266.816h1.242l6.11-8.784l5.711,0.2c2.995-0.102,3.472-2.027,3.472-2.308 c0-0.281-0.63-2.184-3.472-2.157l-5.711,0.2l-6.11-8.785h-1.242l1.67,8.983l-6.535,0.229l-2.281-3.28h-0.561v3.566 c-0.437,0.257-0.738,0.724-0.757,1.266c-0.02,0.583,0.288,1.101,0.757,1.376v3.563h0.561l2.281-3.279l6.535,0.229L251.966,266.816z"/></g></symbol>
 </svg>
 
+<!-- TOAST Message -->
+<div>
+  <div style="height: 0px;" class="position-absolute w-25" style="top: 55px; right: 2px;">
+      <div class="scroll">
+          <div class="toast fade show toast ml-auto">
+              <div class="toast-header">
+                  <strong class="mr-auto" style="color: #2a6059;"><i class="icofont-transparent"></i>CUS876354656</strong>
+                  <small class="text-muted">55 minutes ago</small>
+                  <button type="button" class="ml-0 mb-0 close" style="font-size: 19px; outline: none;" data-dismiss="toast"><i class="icofont-arrow-right"></i></button>
+              </div>
+              <div class="row toast-body">
+                  <div class="col-lg-8" style="color:#6c757d">Mohamed Ashraf Ali</div>
+                  <div class="col-lg-4 text-right blink_me" style="color:#295f58">Approved</div>
+              </div>
+          </div>
+          <div class="toast fade show toast ml-auto">
+            <div class="toast-header">
+                <strong class="mr-auto" style="color: #2a6059;"><i class="icofont-transparent"></i>CUS876354656</strong>
+                <small class="text-muted">55 minutes ago</small>
+                <button type="button" class="ml-0 mb-0 close" style="font-size: 19px; outline: none;" data-dismiss="toast"><i class="icofont-arrow-right"></i></button>
+            </div>
+            <div class="row toast-body">
+                <div class="col-lg-8" style="color:#6c757d">Paramasivam</div>
+                <div class="col-lg-4 text-right blink_me" style="color:#295f58">Approved</div>
+            </div>
+        </div>
+      </div>
+  </div>
+</div>
 
 
-
+<div class="content animationClass">
+<div>
+    <h1>Ashraf</h1>
+</div>
+</div>

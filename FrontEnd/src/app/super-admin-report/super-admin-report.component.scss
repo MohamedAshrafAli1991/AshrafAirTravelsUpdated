@@ -1,0 +1,86 @@
+.content {
+    border-radius: 8px;
+    box-sizing: border-box;
+    line-height: 1.4em;
+    margin: 19px auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 96%;
+  }
+  //spinner
+  .spinner {
+    margin-top: 25%;
+    margin-bottom: 25%;
+  }
+  .spinner-border {
+    color: #2b605a;
+  }
+  //Scroll
+  .table-wrapper-scroll-y {
+    display: block;
+  }
+  .my-custom-scrollbar-right {
+    position: relative;
+    height: 89vh;
+    overflow: auto;
+  }
+  .my-custom-scrollbar {
+    position: relative;
+    height: 75vh;
+    overflow: auto;
+  }
+  //This Page Css
+  .card {
+    width: 96%;
+  }
+  .front .personal-intro {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background: #bfbfbfe8;
+    color: white;
+    margin-left: -46px;
+    margin-right: -46px;
+  }
+  .modal-content {
+    pointer-events: auto;
+    background-color: #ffffff14;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+    outline: 0;
+  }
+  .modal-dialog {
+      max-width: 100% !important;
+      margin: 1.75rem auto;
+  }
+  .inner-card {
+    padding: 10px 10px 10px;
+    width: 100%;
+  }
+  td {
+    border: 0px solid #dee2e6;
+  }
+  .total-row {
+    border: 1px solid #dee2e6;
+    font-size: 35px;
+  }
+  .danger {
+    background-color: #5d1004fc;
+    color: aliceblue;
+  }
+  .cool {
+    background-color: #2b605a;
+    color: aliceblue;
+  }
+  button {
+    outline: none !important;
+  }
+  input {
+    text-transform: uppercase !important;
+  }
+  
+  
+ 
+  
+  
+  

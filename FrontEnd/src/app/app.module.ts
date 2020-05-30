@@ -17,6 +17,7 @@ import { SupperAdminDashboardComponent } from './supper-admin-dashboard/supper-a
 import { SupperAdminRegComponent } from './supper-admin-reg/supper-admin-reg.component';
 import { UserInfoListComponent } from './user-info-list/user-info-list.component';
 import { CounterSinppetDirective } from './directive/counter-sinppet.directive';
+import { SuperAdminReportComponent } from './super-admin-report/super-admin-report.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { CounterSinppetDirective } from './directive/counter-sinppet.directive';
     SupperAdminDashboardComponent,
     SupperAdminRegComponent,
     UserInfoListComponent,
-    CounterSinppetDirective
+    CounterSinppetDirective,
+    SuperAdminReportComponent,
   ],
   imports: [
     BrowserModule,

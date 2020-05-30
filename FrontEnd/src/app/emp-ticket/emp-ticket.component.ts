@@ -12,4 +12,8 @@ export class EmpTicketComponent implements OnInit {
   ngOnInit() {
   }
 
+  ticketPay() {
+    
+  }
+
 }
