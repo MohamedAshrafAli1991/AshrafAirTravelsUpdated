@@ -37,6 +37,7 @@
 	grid-template-columns: repeat(var(--items), 1fr);
 	position: relative;
 }
+
 .links > .line {
 	opacity: 0;
 	transition: all .5s;
@@ -61,3 +62,28 @@
 .links > a:nth-of-type(9):hover ~ .line { --index: 9; }
 .links > a:nth-of-type(10):hover ~ .line { --index: 10; }
 .links > a:last-of-type:hover ~ .line { --index: var(--items); }
+
+a,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+#sidebar ul .active {
+	color: black !important;
+}
+
+.line-vertical {
+	width: 4px;
+	height: 45px;
+	border-radius: 15px;
+    background-color: #2a5f59;
+    position: relative;
+    top: 0px;
+	left: 243px;
+	transition-property: top;
+  	transition-duration: 0.3s;
+  	transition-timing-function: linear;
+}

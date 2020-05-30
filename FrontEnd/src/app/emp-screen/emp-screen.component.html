@@ -16,8 +16,38 @@
 	  </div>
 	</div>
   </div> -->
+  <div class="wrapper bg-white">
+	<!-- Sidebar  -->
+	<nav id="sidebar">
+		<div style="width: 0px;height: 0;">
+			<div class="line-vertical"></div>
+		</div>
+		<ul class="list-unstyled ml-3 mt-3" (click)="selectedElement()">
+			<li class="text-muted"  routerLinkActive="active">
+				<a routerLink="/emp/screen/passport">PassPort</a>
+			</li>
+			<li  class="text-muted"  routerLinkActive="active">
+				<a routerLink="/emp/screen/ticket">Ticket</a>
+			</li>
+			<li  class="text-muted"  routerLinkActive="active">
+				<a routerLink="/emp/screen/xerox">Xerox</a>
+			</li>
+			<li  class="text-muted"  routerLinkActive="active">
+				<a routerLink="/emp/screen/visa">Visa</a>
+			</li>
+			<li  class="text-muted" routerLinkActive="active">
+				<a routerLink="/emp/screen/detail">Detail(s) Screen</a>
+			</li>
+		</ul>
+	</nav>
 
-<router-outlet></router-outlet>
+	<!-- Page Content  -->
+	<div id="content">
+		<router-outlet></router-outlet>
+	</div>
+</div>
+
+
 
 
 
