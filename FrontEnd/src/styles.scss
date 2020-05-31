@@ -7,14 +7,14 @@
   background-image: url('../src/assets/img/email-pattern.png');
 }
 .content {
-  background-color: #f4f4f400;
+  //background-color: #f4f4f400;
 	border-radius: 8px;
 	box-sizing: border-box;
 	color:#2a625b;
 	line-height: 1.4em;
-	margin: 20px auto;
-	margin-top: 80px;
-	padding: 20px;
+	//margin: 20px auto;
+	// margin-top: 80px;
+	padding: 10px;
 	width: 100%;
 	max-width: 60%;
 }
@@ -61,6 +61,7 @@
   padding: 0 .325em;
   z-index: 1;
 }
+
 // custom button
 .btncus {
     height: 50px;
@@ -95,55 +96,55 @@
 }
 
 //Passport
-.cell-number {
-	margin-top: -23px;
-    margin-left: -16px;
-	display: block;
-	margin: 0 px;
-	border: none !important;
-	padding: 0;
-	width: 15.5ch;
-	text-transform: uppercase;
-	background: repeating-linear-gradient(90deg, dimgrey 0, dimgrey 1ch, transparent 0, transparent 1.5ch) 0 100%/ 15ch 2px no-repeat;
-	font: 4ch droid sans mono, consolas, monospace;
-	letter-spacing: 0.5ch;
-}
-.pincode {
-	margin-top: -17px !important;
-    margin-left: -17px !important;
-	color: #2c645d;;
-	display: block;
-	margin: auto;
-	border: none;
-	padding: 0px;
-	text-transform: uppercase;
-	background: repeating-linear-gradient(90deg, dimgrey 0, dimgrey 1ch, transparent 0, transparent 1.5ch) 0 100%/9ch 1px no-repeat;
-	font: 3ch droid sans mono, consolas, monospace;
-	letter-spacing: 0.5ch;
-}
-.input-cus{
-  background: #eae7e7;
-  border:none;
-  outline:none;
-  display:inline-block;
-  height:34px;
-  vertical-align:middle;
-  position:relative;
-  bottom:14px;
-  right:9px;
-  border-radius:22px;
-  width:220px;
-  box-sizing:border-box;
-  padding:0 18px; 
-}
-.input-cus[type="button"]{ 
-    background: rgb(42, 96, 89) !important;
-    color:#fff;
-    position:relative;
-    top:25px; 
-    width:100px;
-    cursor:pointer;
-}
+// .cell-number {
+// 	margin-top: -23px;
+//     margin-left: -16px;
+// 	display: block;
+// 	margin: 0 px;
+// 	border: none !important;
+// 	padding: 0;
+// 	width: 15.5ch;
+// 	text-transform: uppercase;
+// 	background: repeating-linear-gradient(90deg, dimgrey 0, dimgrey 1ch, transparent 0, transparent 1.5ch) 0 100%/ 15ch 2px no-repeat;
+// 	font: 4ch droid sans mono, consolas, monospace;
+// 	letter-spacing: 0.5ch;
+// }
+// .pincode {
+// 	margin-top: -17px !important;
+//     margin-left: -17px !important;
+// 	color: #2c645d;;
+// 	display: block;
+// 	margin: auto;
+// 	border: none;
+// 	padding: 0px;
+// 	text-transform: uppercase;
+// 	background: repeating-linear-gradient(90deg, dimgrey 0, dimgrey 1ch, transparent 0, transparent 1.5ch) 0 100%/9ch 1px no-repeat;
+// 	font: 3ch droid sans mono, consolas, monospace;
+// 	letter-spacing: 0.5ch;
+// }
+// .input-cus{
+//   background: #eae7e7;
+//   border:none;
+//   outline:none;
+//   display:inline-block;
+//   height:34px;
+//   vertical-align:middle;
+//   position:relative;
+//   bottom:14px;
+//   right:9px;
+//   border-radius:22px;
+//   width:220px;
+//   box-sizing:border-box;
+//   padding:0 18px; 
+// }
+// .input-cus[type="button"]{ 
+//     background: rgb(42, 96, 89) !important;
+//     color:#fff;
+//     position:relative;
+//     top:25px; 
+//     width:100px;
+//     cursor:pointer;
+// }
 //select box
 .box {
   margin-left: -10px !important;

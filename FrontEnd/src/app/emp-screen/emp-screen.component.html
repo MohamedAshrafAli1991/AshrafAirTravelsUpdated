@@ -1,4 +1,12 @@
 <header id="">
+	<nav class="links" style="--items: 3;">
+		<a class="text-left"><i class="icofont-simple-smile"></i>&nbsp;&nbsp;&nbsp; Mohamed Ashraf Ali</a>
+		<a></a>
+		<a class="text-right"> <i class="icofont-ui-messaging"></i>&nbsp;&nbsp;&nbsp;<i class="icofont-sign-out text-right"></i></a>
+		<span class="line"></span>
+	</nav>
+</header>
+<!-- <header id="">
 	<nav class="links" style="--items: 5;">
 		<a routerLink="/emp/screen/passport">PassPort</a>
 		<a routerLink="/emp/screen/ticket">Ticket</a>
@@ -7,7 +15,7 @@
 		<a routerLink="/emp/screen/detail">Detail(s) Screen</a>
 		<span class="line"></span>
 	</nav>
-</header>
+</header> -->
 <!-- <div class="row">
 	<div class="col-6">
 	  <div class="form">
@@ -16,36 +24,58 @@
 	  </div>
 	</div>
   </div> -->
-  <div class="wrapper bg-white">
-	<!-- Sidebar  -->
-	<nav id="sidebar">
-		<div style="width: 0px;height: 0;">
-			<div class="line-vertical"></div>
+  <div style="margin-top: 60px; margin-left: 25px; margin-right: 25px;">
+	<div class="wrapper bg-white" style="padding-top: 40px;padding-bottom: 60px;">
+		<!-- Sidebar  -->
+		<nav id="sidebar" style="border-right: 1px solid #e6e6e6ba;">
+			<div style="width: 0px;height:0px;">
+				<div class="line-vertical"></div>
+			</div>
+			<div  >
+				<ul class="list-unstyled ml-3 mt-3 text-left" (click)="selectedElement()">
+					<!-- <li class="text-muted"   routerLinkActive="active" >
+						<a routerLink="/emp/screen/visa"> <span class="icofont-sign-in"></span>Sign-In</a>
+					</li> -->
+					<li class="text-muted"   routerLinkActive="active" >
+						<a routerLink="/emp/screen/passport"> <span class="icofont-penalty-card"></span>PassPort</a>
+					</li>
+					<li  class="text-muted"  routerLinkActive="active">
+						<a routerLink="/emp/screen/ticket"><span class="icofont-air-ticket"></span>Ticket</a>
+					</li>
+					<!-- <li  class="text-muted"  routerLinkActive="active">
+						<a routerLink="/emp/screen/visa"><span class="icofont-bank-transfer-alt"></span>Pan</a>
+					</li> -->
+					<li  class="text-muted"  routerLinkActive="active">
+						<a routerLink="/emp/screen/xerox"><span class="icofont-pixels"></span>Xerox</a>
+					</li>
+					<li  class="text-muted"  routerLinkActive="active">
+						<a routerLink="/emp/screen/visa"><span class="icofont-brand-sk-telecom"></span>Visa</a>
+					</li>
+					<!-- <li  class="text-muted" routerLinkActive="active">
+						<a routerLink="/emp/screen/detail"><span class="icofont-euro-plus"></span> Exchange</a>
+					</li> -->
+					<!-- <li  class="text-muted" routerLinkActive="active">
+						<a routerLink="/emp/screen/detail"><span class="icofont-stack-exchange"></span>Stamping</a>
+					</li> -->
+					<!-- <li  class="text-muted" routerLinkActive="active">
+						<a routerLink="/emp/screen/detail"><span class="icofont-attachment"></span>Other</a>
+					</li> -->
+					<!-- <li  class="text-muted" routerLinkActive="active">
+						<a routerLink="/emp/screen/detail"><span class="icofont-info"></span>User Info</a>
+					</li> -->
+					<!-- <li  class="text-muted"  routerLinkActive="active">
+						<a routerLink="/emp/screen/visa"><span class="icofont-sign-out"></span>Sign-out</a>
+					</li> -->
+				</ul>
+			</div>
+		</nav>
+	
+		<!-- Page Content  -->
+		<div id="content">
+			<router-outlet></router-outlet>
 		</div>
-		<ul class="list-unstyled ml-3 mt-3" (click)="selectedElement()">
-			<li class="text-muted"  routerLinkActive="active">
-				<a routerLink="/emp/screen/passport">PassPort</a>
-			</li>
-			<li  class="text-muted"  routerLinkActive="active">
-				<a routerLink="/emp/screen/ticket">Ticket</a>
-			</li>
-			<li  class="text-muted"  routerLinkActive="active">
-				<a routerLink="/emp/screen/xerox">Xerox</a>
-			</li>
-			<li  class="text-muted"  routerLinkActive="active">
-				<a routerLink="/emp/screen/visa">Visa</a>
-			</li>
-			<li  class="text-muted" routerLinkActive="active">
-				<a routerLink="/emp/screen/detail">Detail(s) Screen</a>
-			</li>
-		</ul>
-	</nav>
-
-	<!-- Page Content  -->
-	<div id="content">
-		<router-outlet></router-outlet>
-	</div>
-</div>
+	  </div>
+  </div>
 
 
 

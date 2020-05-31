@@ -914,8 +914,9 @@ section {
 
 .wrapper {
   display: flex;
-  width: 100%;
+  width: 95%;
   align-items: stretch;
+  margin: auto;
 }
 
 #sidebar {
@@ -937,9 +938,17 @@ section {
 
 
 #sidebar ul li a {
+  font-weight: 200;
   padding: 10px;
-  font-size: 1.1em;
+  font-size: 20px; 
+  /* font-size: 1.1em; */
   display: block;
+}
+
+#sidebar ul li span {
+  font-size: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 #sidebar ul li a:hover {
@@ -961,7 +970,7 @@ a[aria-expanded="true"] {
 #content {
   width: 100%;
   padding: 20px;
-  min-height: 100vh;
+  min-height: 80vh;
   transition: all 0.3s;
 }
 

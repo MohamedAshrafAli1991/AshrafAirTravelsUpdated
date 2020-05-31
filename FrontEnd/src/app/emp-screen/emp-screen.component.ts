@@ -17,13 +17,9 @@ export class EmpScreenComponent implements OnInit {
       const el: any = document.querySelectorAll('#sidebar ul > .active');
       let postion = el[0].offsetTop || 0;
       const offsetHeight = el[0].offsetHeight || 0;
-      postion = postion - offsetHeight;
-
+      postion =(postion - offsetHeight);
       console.log(postion);
-    //   lineElement.setStyle({
-    //     top: postion + 'px',
-    //  });
-      lineElement.style.top = postion + 'px';
+      lineElement.style.top =  postion + 'px';
     }, 100);
 
   }

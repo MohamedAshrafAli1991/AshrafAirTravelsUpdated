@@ -1,3 +1,15 @@
+.note {
+  background-color: #f4f4f400;
+	border-radius: 8px;
+	box-sizing: border-box;
+	color:#2a625b;
+	line-height: 1.4em;
+	margin: 20px auto;
+	margin-top: 80px;
+	padding: 20px;
+	width: 100%;
+	max-width: 60%;
+}
 .cell-number:focus{
 	outline-offset: -50px !important;
 }
@@ -22,7 +34,7 @@
 
 // Special - card
   .card {
-      width: 55%;
+      width: 100%;
   }
   .front .personal-intro {
     margin-top: 10%;
