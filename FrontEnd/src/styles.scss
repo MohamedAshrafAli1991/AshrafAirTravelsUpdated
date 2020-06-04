@@ -16,7 +16,7 @@
 	// margin-top: 80px;
 	padding: 10px;
 	width: 100%;
-	max-width: 60%;
+	max-width: 1000%;
 }
 .content ul {
 	margin: .5em 2em;
@@ -29,6 +29,8 @@
 	margin: 2vmin 3vmin;
   color: #999;
 }
+
+// Input Max for Xerox
 .inputContainer{
     position:relative;
     top:100px;
@@ -68,17 +70,19 @@
     text-align: center;
     width: 150px;
     cursor: pointer;
-    border-radius: 25px;
-    border-color: #2d655d;
+    border-radius: 75px;
+    border-color: #e6e8e900;
+    //border-color: #327e90;
 }
 .btncus-outline-primary {
-  color: #2d655d;
+  color: #327e90;
 }
 .btncus-outline-primary:focus, .btncus-outline-primary.focus {
-  box-shadow: 0 0 0 0.1rem rgb(45, 101, 93);
+  box-shadow: 0 0 0 0.1rem #327e90;
   color: #fff;
-  background-color: #2d655d;
-  border-color: #2b625b;
+  background-color: #327e90;
+  border-color: #e6e8e900;
+  //border-color: #327e90;
   
 }
 .btncus:focus, .btncus.focus {
@@ -86,13 +90,15 @@
 }
 .btncus-outline-primary:hover {
   color: #fff;
-  background-color: #2d655d;
-  border-color: #2b625b;
+  background-color: #327e90;
+  border-color: #e6e8e900;
+  //border-color: #327e90;
 }
 .btncus-outline-primary:active {
   color: #fff;
-  background-color: #2d655d;
-  border-color: #2b625b;
+  background-color: #327e90;
+  border-color: #e6e8e900;
+  //border-color: #327e90;
 }
 
 //Passport
@@ -145,7 +151,8 @@
 //     width:100px;
 //     cursor:pointer;
 // }
-//select box
+
+//select box 
 .box {
   margin-left: -10px !important;
   margin-top: -12px !important;
@@ -399,7 +406,7 @@
     display: block;
   }
 
-//Row Button
+//Row Button 
  .button {
   border-radius: 12px;
     border: 1px solid #2e2e2e;
@@ -451,4 +458,198 @@
 }
 .button:active div {
   color: darkred;
+}
+
+// Emp New Scss Design
+//Note
+.note {
+  background-color: #f4f4f400;
+	border-radius: 8px;
+	box-sizing: border-box;
+	color:#2a625b;
+	line-height: 1.4em;
+	margin: 20px auto;
+	margin-top: 10px;
+	padding: 20px;
+	width: 100%;
+	max-width: 60%;
+}
+//Pay Button
+// .parent {
+// 	font-family: 'Major Mono Display', monospace;
+// }
+// .parent, .btn {
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: center;
+// }
+// .btn {
+// 	font-size: 30px;
+// 	width: 150px;
+// 	height: 30px;
+// 	cursor: pointer;
+// 	color: #327e90;
+// 	font-weight: bold;
+// 	-webkit-tap-highlight-color: transparent;
+// }
+// .btn::before, .btn::after, .btn {
+// 		transition: 500ms;
+// }
+// .btn::before, .btn::after {
+// 	position: absolute;
+// 	height: auto;
+// 	color: #9FA4C4;
+// 	font-size: 40px;
+// 	transform: translateX(-50%);
+// }
+// .btn::before {
+// 	content: "[";
+// 	left: calc(50% - 70px);
+// }
+// .btn::after {
+// 	content: "]";
+// 	left: calc(50% + 70px);
+// }
+// .btn:hover::before {
+// 	left: calc(50% - 60px);
+// }
+// .btn:hover::after {
+// 	left: calc(50% + 60px);
+// }
+// .btn:active {
+// 	font-size: 0;
+// }
+// .btn:active::before {
+// 	font-size: 20px;
+// 	left: calc(50% - 5px);
+// }
+// .btn:active::after {
+// 	font-size: 20px;
+// 	left: calc(50% + 5px);
+// }
+
+//Input Group
+.form__group {
+	position: relative;
+	padding: 15px 0 0;
+	margin-top: 10px;
+	width: 60%;
+}
+  
+.form__field {
+	font-family: inherit;
+	text-transform: capitalize;
+	width: 100%;
+	border: 0;
+	border-bottom: 2px solid #9b9b9b;
+	outline: 0;
+	font-size: 1.5rem;
+	color:#2a5f59;
+	padding: 3px 0;
+	background: transparent;
+	transition: border-color 0.2s;
+}
+.form__field::placeholder {
+	color: transparent;
+}
+.form__field:placeholder-shown ~ .form__label {
+	font-size: 1.3rem;
+	cursor: text;
+	top: 20px;
+}
+  
+.form__label {
+	position: absolute;
+	top: 0;
+	display: block;
+	transition: 0.2s;
+	font-size: 1rem;
+	color: #9b9b9b;
+}  
+.form__field:focus {
+	padding-bottom: 6px;
+	//font-weight: 700;
+	border-width: 3px;
+	border-image: linear-gradient(to right, #11998e, #38ef7d);
+	border-image-slice: 1;
+}
+.form__field:focus ~ .form__label {
+	position: absolute;
+	top: 0;
+	display: block;
+	transition: 0.2s;
+	font-size: 1rem;
+	color: #11998e;
+	font-weight: 700;
+}
+
+// Radio Button
+.box {
+  margin-left: 3px !important;
+  margin-top: 10px !important;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 10px;
+  display: inline-block;
+  overflow: hidden;
+}
+.middle {
+  width: 100%;
+  text-align: center;
+}
+.middle input[type="radio"] {
+  display: none;
+}
+.middle input[type="radio"]:checked + .box {
+  background-color: #007e90;
+}
+.middle input[type="radio"]:checked + .box span {
+  color: white;
+  transform: translateY(70px);
+}
+.middle input[type="radio"]:checked + .box span:before {
+  transform: translateY(0px);
+  opacity: 1;
+}
+.middle .box {
+  width: 200px;
+  height: 200px;
+  background-color: #6c757d2b;
+  transition: all 250ms ease;
+  will-change: transition;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  font-family: "Dax", sans-serif;
+  font-weight: 900;
+}
+.middle .box:active {
+  transform: translateY(10px);
+}
+.middle .box span {
+  position: absolute;
+  transform: translate(0, 60px);
+  left: 0;
+  right: 0;
+  transition: all 300ms ease;
+  font-size: 1.5em;
+  user-select: none;
+  color: #007e90;
+}
+.middle .box span:before {
+  font-size: 1.2em;
+  font-family: icofont;
+  display: block;
+  transform: translateY(-80px);
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+  font-weight: normal;
+  color: white;
+}
+.middle .front-end span:before {
+  content: '\ed01';
+}
+.middle .back-end span:before {
+  content: '\ed1a';
 }

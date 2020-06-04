@@ -18,6 +18,10 @@ import { SupperAdminRegComponent } from './supper-admin-reg/supper-admin-reg.com
 import { UserInfoListComponent } from './user-info-list/user-info-list.component';
 import { CounterSinppetDirective } from './directive/counter-sinppet.directive';
 import { SuperAdminReportComponent } from './super-admin-report/super-admin-report.component';
+import { EmpCusSignInComponent } from './emp-cus-sign-in/emp-cus-sign-in.component';
+import { EmpCusSignOutComponent } from './emp-cus-sign-out/emp-cus-sign-out.component';
+import { EmpPanComponent } from './emp-pan/emp-pan.component';
+import { EmpOtherComponent } from './emp-other/emp-other.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +40,10 @@ import { SuperAdminReportComponent } from './super-admin-report/super-admin-repo
     UserInfoListComponent,
     CounterSinppetDirective,
     SuperAdminReportComponent,
+    EmpCusSignInComponent,
+    EmpCusSignOutComponent,
+    EmpPanComponent,
+    EmpOtherComponent,
   ],
   imports: [
     BrowserModule,

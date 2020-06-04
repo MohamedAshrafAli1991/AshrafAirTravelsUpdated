@@ -1,0 +1,70 @@
+<h2 class="heading-right">Sign-In</h2>
+<!-- <div class="content text-center">
+    <h1>Welcome to Ashraf Air Travels</h1>
+</div> -->
+<br>
+<div class="note">
+    <strong>Notes</strong>
+    <ul>
+    <li>Sign in Notes has detected unusual activity on your device or network. Please complete the security check below to access in this application.</li>
+        <li>Please Fill <code>user token</code> fields <code><span class="icofont-warning"></span></code>.</li>
+    </ul>
+  </div>
+<div class="middle">
+    <label>
+    <input type="radio" name="radio" (click)="chooseUserType('new')"/>
+    <div class="front-end box">
+      <span>New User</span>
+    </div>
+  </label>
+  
+    <label>
+    <input type="radio" name="radio" (click)="chooseUserType('existing')" checked/>
+    <div class="back-end box">
+      <span>Existing User</span>
+    </div>
+  </label>
+  </div>
+  <div class="row" *ngIf="!newCustomer">
+      <div class="col-3"></div>
+      <div class="col-6">
+        <fieldset class="border p-2">
+            <legend  class="w-auto"><i class="icofont-transparent color"></i> &nbsp;<small>Token</small></legend>
+            <input type="text" value="CUS123456789" id="name"/>
+         </fieldset>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      
+    </div>
+  </div>
+  <div *ngIf="newCustomer">
+  <div class="row">
+      <div class="col-3"></div>
+      <div class="col-6">
+        <fieldset class="border p-2">
+            <legend  class="w-auto"><i class="icofont-phone color"></i>&nbsp; <small>Mobile Number</small></legend>
+            <input type="number" value="9442477040" id="mobileNumber" maxlength="10"/>
+         </fieldset>
+      </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+      <fieldset class="border p-2">
+          <legend  class="w-auto"><i class="icofont-phone color"></i>&nbsp; <small>Customer Name</small></legend>
+          <input style="font-size: 30px;" type="text" value="Mohamed Ashraf Ali" id="name"/>
+       </fieldset>
+    </div>
+</div>
+  </div>
+<br>
+  <div class="row">
+    <div class="col-12 text-center">
+      <div class="btn-position-cus">
+        <button class="btncus btncus-outline-primary" (click)="signIn()">Sign-In</button>
+      </div> 
+    </div>
+  </div>

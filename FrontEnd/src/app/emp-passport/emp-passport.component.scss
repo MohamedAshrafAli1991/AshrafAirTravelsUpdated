@@ -1,63 +1,112 @@
-.note {
-  background-color: #f4f4f400;
-	border-radius: 8px;
-	box-sizing: border-box;
-	color:#2a625b;
-	line-height: 1.4em;
-	margin: 20px auto;
-	margin-top: 80px;
-	padding: 20px;
-	width: 100%;
-	max-width: 60%;
+.header-icon {
+	margin-top: -59px;
+    font-size: 110px;
+    color: #327e90;
 }
-.cell-number:focus{
-	outline-offset: -50px !important;
+.header-token {
+    color: #909699;
+    font-size: 20px;
+    font-weight: 300;
 }
-.input-lable {
-	text-align:left;
-	padding-left: 0px;
+strong {
+    font-size: 16px;
+    color: #9b9b9b;
+    font-weight: 500;
 }
-.iphone-icone {
-	color:#2c645d;;
-	text-align: right;
-	padding-right: 1px;
-	bottom: 10px;
-	font-size: 31px;
-}
-.icone-left-special {
-	margin-top: 6px;
-	color: #ab333e;
-	text-align:left;
-	padding-left: 0px;
-	top: -11px;
-}
+//Radio Button
+.box {
+    margin-left: 1px !important;
+    margin-top: 10px !important;
+  }
+  .middle input[type="radio"]:checked + .box span {
+    transform: translateY(10px);
+  }
+  .middle input[type="radio"]:checked + .box span:before {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  .middle .box {
+    width: 177px;
+    height: 102px;
+    font-weight: 100;
+  }
+  .middle .box:active {
+    transform: translateY(3px);
+  }
+  .middle .box span {
+    transform: translate(0, -20px);
+  }
+  .middle .box span:before {
+    line-height: 1.8em;
+    font-size: 1.2em;
+    transform: translateY(-20px);
+  }
+  .middle .front-end span:before {
+    content: '\ead2';
+  }
+  .middle .back-end span:before {
+    content: '\ebe6';
+  }
 
-// Special - card
-  .card {
-      width: 100%;
-  }
-  .front .personal-intro {
-    margin-top: 10%;
-    margin-bottom: 10%;
-    background: #000000ab;
-    color: white;
-  }
-  .btn-position-cus {
-    position: absolute;
-    bottom: -8%;
-    margin-left: 41%;
-    white-space: nowrap;
-  }
-  .modal-content {
-    pointer-events: auto;
-    background-color: #ffffff14;
-    background-clip: padding-box;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 0.3rem;
-    outline: 0;
-}
-.modal-dialog {
-    max-width: 100% !important;
-    margin: 1.75rem auto;
-}
+
+
+
+
+
+  
+
+// .header-name {
+//   font-size: 100px;
+//   color: #919699;
+// }
+// .cell-number:focus{
+// 	outline-offset: -50px !important;
+// }
+// .input-lable {
+// 	text-align:left;
+// 	padding-left: 0px;
+// }
+// .iphone-icone {
+// 	color:#2c645d;;
+// 	text-align: right;
+// 	padding-right: 1px;
+// 	bottom: 10px;
+// 	font-size: 31px;
+// }
+// .icone-left-special {
+// 	margin-top: 6px;
+// 	color: #ab333e;
+// 	text-align:left;
+// 	padding-left: 0px;
+// 	top: -11px;
+// }
+
+// // Special - card
+//   .card {
+//       width: 100%;
+//   }
+//   .front .personal-intro {
+//     margin-top: 10%;
+//     margin-bottom: 10%;
+//     background: #000000ab;
+//     color: white;
+//   }
+//   .btn-position-cus {
+//     position: absolute;
+//     bottom: -8%;
+//     margin-left: 41%;
+//     white-space: nowrap;
+//   }
+//   .modal-content {
+//     pointer-events: auto;
+//     background-color: #ffffff14;
+//     background-clip: padding-box;
+//     border: 1px solid rgba(0, 0, 0, 0.2);
+//     border-radius: 0.3rem;
+//     outline: 0;
+// }
+// .modal-dialog {
+//     max-width: 100% !important;
+//     margin: 1.75rem auto;
+// }
   
