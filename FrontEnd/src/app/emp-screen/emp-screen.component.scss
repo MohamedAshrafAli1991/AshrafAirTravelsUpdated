@@ -1,14 +1,7 @@
-// #header {
-// 	position: fixed;
-// 	top: 5px;
-// 	left: 0;
-// 	right: 0;
-// }
+
 .links {
 	background-color: #327d8f;
 	background-image: linear-gradient(to bottom, #0003, transparent);
-	// border-bottom: 1px solid #0003;
-	// box-shadow: 0 0 32px #0003;
 	font-weight: 300;
 }
 .links > a {
@@ -34,30 +27,30 @@
 	position: relative;
 }
 
-// .links > .line {
-// 	opacity: 0;
-// 	transition: all .5s;
-// 	position: absolute;
-// 	bottom: 0;
-// 	left: var(--left, calc(100% / var(--items) * (var(--index) - 1)));
-// 	width: var(--width, calc(100% / var(--items)));
-// 	--index: 0;
-// }
-// .links > a:hover ~ .line {
-// 	opacity: 1;
-// }
+.links > .line {
+	opacity: 0;
+	transition: all .5s;
+	position: absolute;
+	bottom: 0;
+	left: var(--left, calc(100% / var(--items) * (var(--index) - 1)));
+	width: var(--width, calc(100% / var(--items)));
+	--index: 0;
+}
+.links > a:hover ~ .line {
+	opacity: 1;
+}
 
-// .links > a:nth-of-type(1):hover ~ .line { --index: 1; }
-// .links > a:nth-of-type(2):hover ~ .line { --index: 2; }
-// .links > a:nth-of-type(3):hover ~ .line { --index: 3; }
-// .links > a:nth-of-type(4):hover ~ .line { --index: 4; }
-// .links > a:nth-of-type(5):hover ~ .line { --index: 5; }
-// .links > a:nth-of-type(6):hover ~ .line { --index: 6; }
-// .links > a:nth-of-type(7):hover ~ .line { --index: 7; }
-// .links > a:nth-of-type(8):hover ~ .line { --index: 8; }
-// .links > a:nth-of-type(9):hover ~ .line { --index: 9; }
-// .links > a:nth-of-type(10):hover ~ .line { --index: 10; }
-// .links > a:last-of-type:hover ~ .line { --index: var(--items); }
+.links > a:nth-of-type(1):hover ~ .line { --index: 1; }
+.links > a:nth-of-type(2):hover ~ .line { --index: 2; }
+.links > a:nth-of-type(3):hover ~ .line { --index: 3; }
+.links > a:nth-of-type(4):hover ~ .line { --index: 4; }
+.links > a:nth-of-type(5):hover ~ .line { --index: 5; }
+.links > a:nth-of-type(6):hover ~ .line { --index: 6; }
+.links > a:nth-of-type(7):hover ~ .line { --index: 7; }
+.links > a:nth-of-type(8):hover ~ .line { --index: 8; }
+.links > a:nth-of-type(9):hover ~ .line { --index: 9; }
+.links > a:nth-of-type(10):hover ~ .line { --index: 10; }
+.links > a:last-of-type:hover ~ .line { --index: var(--items); }
 
 a,
 a:hover,
@@ -85,3 +78,192 @@ a:focus {
   	transition-duration: 0.3s;
   	transition-timing-function: linear;
 }
+
+//Bell 
+.bell-icon {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: #ffffff12;
+    border-radius: 50%;
+    display: flex;
+    svg {
+      margin: auto;
+      position: relative;
+      right: 2%;
+      width: 80%;
+      height: 80%;
+      stroke: rgba(0, 0, 0, 0.75);
+    }
+    .bell-icon__group {
+      transform-origin: 50% 2px;
+      transform: rotate(-8deg);
+      animation-fill-mode: both;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in-out;
+    }
+    .bell-icon__ball {
+      transform-origin: 50% 2px;
+      transform: translateX(-6.5%);
+      animation-fill-mode: both;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in-out;
+    }
+    &:focus,
+    &:hover {
+      outline: none;
+      box-shadow: 0 0 12px -8px rgba(0, 0, 0, 0.6);
+      .bell-icon__group {
+        animation: animateGroup 2.3s;
+      }
+      .bell-icon__ball {
+        animation: animateBall 2.3s;
+      }
+      .notification-amount {
+        opacity: 1;
+        visibility: visible;
+        &::before {
+          animation-name: bounce;
+          animation-delay: 450ms;
+        }
+      }
+    }
+  }
+  
+  .notification-amount {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 20%;
+    right: 24%;
+    width: 20px;
+    height: 20px;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Copse", serif;
+    font-size: 11px;
+    span {
+      position: relative;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #307687;
+      border-radius: 50%;
+      z-index: 0;
+      transform: scale(0);
+      animation-duration: 800ms;
+      animation-fill-mode: both;
+    }
+  }
+  
+  $frameLength: 0.8771;
+  
+  @keyframes animateGroup {
+    0%,
+    100% {
+      transform: rotate(-8deg);
+    }
+    #{$frameLength * 20%} {
+      transform: rotate(0deg);
+    }
+    #{$frameLength * 40%} {
+      transform: rotate(-20deg);
+    }
+    #{$frameLength * 55%} {
+      transform: rotate(20deg);
+    }
+    #{$frameLength * 65%} {
+      transform: rotate(-20deg);
+    }
+    #{$frameLength * 74%} {
+      transform: rotate(8deg);
+    }
+    #{$frameLength * 85%} {
+      transform: rotate(-15deg);
+    }
+    #{$frameLength * 90%} {
+      transform: rotate(-7deg);
+    }
+  }
+  
+  @keyframes animateBall {
+    0%,
+    100% {
+      transform: translateX(-6.5%);
+    }
+    #{$frameLength * 20%} {
+      transform: translateX(0%);
+    }
+    #{$frameLength * 25%} {
+      transform: translateX(-1%);
+    }
+    #{$frameLength * 40%} {
+      transform: translateX(11%);
+    }
+    #{$frameLength * 55%} {
+      transform: translateX(-11%);
+    }
+    #{$frameLength * 60%} {
+      transform: translateX(0%);
+    }
+    #{$frameLength * 68%} {
+      transform: translateX(10%);
+    }
+    #{$frameLength * 78%} {
+      transform: translateX(-11%);
+    }
+    #{$frameLength * 90%} {
+      transform: translateX(11%);
+    }
+    #{$frameLength * 98%} {
+      transform: translateX(-11%);
+    }
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: scale(0);
+    }
+  
+    14% {
+      transform: scale(1.15);
+    }
+  
+    28% {
+      transform: scale(1);
+    }
+  
+    42% {
+      transform: scale(1.15);
+    }
+  
+    70% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  // Toast Message Slide
+  .wrappers {
+    position: relative;
+    overflow: hidden;
+    height: 700px; 
+  }
+  #slide {
+    position: absolute;
+    right: -900px;
+    width: 275px;
+    transition: 1s;
+  }
+  .wrappers-active #slide {
+    transition: 1s;
+    right: 3px;
+  }

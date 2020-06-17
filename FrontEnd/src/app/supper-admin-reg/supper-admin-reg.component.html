@@ -1,75 +1,129 @@
 <h2 class="heading-right">Registration</h2>
-<div class="">
-  <div class="content">
-    <div class="row"> 
-        <div class="col-12">
-          <h2 style="text-align:center; margin-bottom: 1px;">Registration</h2>
-        </div>
+<div class="conten">
+  <h1 class="text-center">Registration</h1>
+  <div class="middle">
+    <label>
+    <input type="radio" name="radio" (click)="chooseUserType('emp')" checked/>
+    <div class="front-end box">
+      <span>New Employe</span>
     </div>
-</div>
-<div class="content" style="margin-top: 3px;">
-    <div class="inputContainer" style="margin-top: -10%;">
-      <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" autocomplete="off" novalidate>
-        <div> 
+  </label>
+    <label>
+    <input type="radio" name="radio" (click)="chooseUserType('broker')"/>
+    <div class="back-end box">
+      <span>New Broker</span>
+    </div>
+  </label>
+  </div>
+  <div >
+    <!-- Type Emp -->
+  <div *ngIf="isTypeEmp">
+    <form name="empForm" (ngSubmit)="onSubmit('emp')" #employee="ngForm" novalidate>
+      <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+          <fieldset class="border p-2">
+              <legend  class="w-auto"><i class="icofont-phone color"></i>&nbsp; <small>Employee's Cell Number *</small></legend>
+              <input type="text" name="cellNumber"  [(ngModel)]="emp.cellNumber" #cellNumber="ngModel" autocomplete="off" pattern="^\d{10}$" required />
+          </fieldset>
+        </div>
+        <div class="col-3 icofont-warning icofont-5x icone-left" *ngIf="employee.submitted && cellNumber.invalid" ></div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+          <fieldset class="border p-2">
+              <legend  class="w-auto"><i class="icofont-phone color"></i>&nbsp; <small>Employee's Full Name *</small></legend>
+              <input type="text" name="fullName"  [(ngModel)]="emp.fullName" #fullName="ngModel"  autocomplete="off" required />
+          </fieldset>
+        </div>
+        <div class="col-3 icofont-warning icofont-5x icone-left" *ngIf="employee.submitted && fullName.invalid" ></div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-12 text-center">
+          <div class="btn-position-cus">
+            <button class="btncus btncus-outline-primary" type="submit">Registered</button>
+          </div> 
+        </div>
+      </div>
+      <br>
+    </form>
+  </div>
+     <!-- Type Broker -->
+    <div *ngIf="!isTypeEmp">
+        <form name="form" (ngSubmit)="onSubmit('broker')" #broker="ngForm" novalidate>
           <div class="row">
-            <div class="col-4 icofont-iphone iphone-icone"></div>
-              <div class="col-5">
-                <input  class="input-cus" type="text" class="cell-number" style="border-radius: 0px;"  maxlength= "10" name="cell" [(ngModel)]="cus.cell" #cell="ngModel"  required/>
-              </div>
-              <div class="col-3 icofont-warning icofont-2x icone-left-special" *ngIf="f.submitted && cell.invalid" ></div>
-          </div>
-        <br />
-          <div class="row">
-              <div class="col-4 icofont-ui-v-card icone-right"></div>
-              <div class="box">
-                <select name="role" [(ngModel)]="cus.role">
-                  <option value="customer">Customer</option>
-                  <option value="broker">Broker</option>
-                  <option value="employee">Employee</option>
-                </select>
-              </div>
+            <div class="col-3"></div>
+            <div class="col-6">
+              <fieldset class="border p-2">
+                  <legend  class="w-auto"><i class="icofont-phone color"></i>&nbsp; <small>Broker's Cell Number *</small></legend>
+                  <input type="number" name="cellNumber"  [(ngModel)]="bro.cellNumber" #cellNumber="ngModel" autocomplete="off" required />
+              </fieldset>
             </div>
-        <br/> 
+            <div class="col-3 icofont-warning icofont-5x icone-left" *ngIf="broker.submitted && cellNumber.invalid" ></div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+              <fieldset class="border p-2">
+                  <legend  class="w-auto"><i class="icofont-phone color"></i>&nbsp; <small>Broker's Full Name *</small></legend>
+                  <input type="text" name="fullName"  [(ngModel)]="bro.fullName" #fullName="ngModel" autocomplete="off" required />
+              </fieldset>
+            </div>
+            <div class="col-3 icofont-warning icofont-5x icone-left" *ngIf="broker.submitted && fullName.invalid" ></div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-12 text-center">
+              <div class="btn-position-cus">
+                <button class="btncus btncus-outline-primary" type="submit">Registered</button>
+              </div> 
+            </div>
+          </div>
+          <br>
+        </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="content">
+      <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+        <div> 
           <div class="row">
             <div class="col-4 icofont-ui-user icone-right"></div>
             <div class="col-3 input-lable">
-              <input class="input-cus" type="text" name="name" placeholder="Full Name" [(ngModel)]="cus.name" #name="ngModel" required />
+              <input type="text" name="firstName"  [(ngModel)]="cus.firstName" #firstName="ngModel" required />
             </div>
-            <div class="col-5 icofont-warning icofont-2x icone-left" *ngIf="f.submitted && name.invalid" ></div>
+            <div class="col-5 icofont-warning icofont-2x icone-left" *ngIf="f.submitted && firstName.invalid" ></div>
           </div>
         <br/>
           <div class="row">
             <div class="col-4 icofont-ui-user icone-right"></div>
             <div class="col-3 input-lable">
-              <input class="input-cus" type="number"  name="amount" placeholder="Amount" [(ngModel)]="cus.amount" #amount="ngModel" required/>
+              <input type="text"  name="lastName" [(ngModel)]="cus.lastName" #lastName="ngModel" required/>
             </div>
-            <div class="col-5 icofont-warning icofont-2x icone-left" *ngIf="f.submitted && amount.invalid" ></div>
+            <div class="col-5 icofont-warning icofont-2x icone-left" *ngIf="f.submitted && lastName.invalid" ></div>
           </div>
         </div>
         <div class="row">
           <div class="col-4"></div>
           <div class="col-4">
-            <button class="btncus btncus-outline-primary" type="onSubmit()">Register</button>
+            <button class="btncus btncus-outline-primary" type="submit" (click)="test()">Register</button>
           </div>
           <div class="col-4"></div>
-          
         </div>
       </form>
-    </div>
-</div>
-<div class="content">
-  <div class="col-4">
-    <button class="btncus btncus-outline-primary" (click)="pay()">Pay</button>
-  </div>
-</div>
-<div class="content" style="margin-top: 85px;">
-    <strong>Notes</strong>
-    <ul>
-    <li>Passport application can be processed at any PSK/POPSK/PSLK WITHIN INDIA irrespective of your residential address.</li>
-        <li>Please Fill <code>all mandatory</code> fields <code><span class="icofont-warning"></span></code>.</li>
-    </ul>
-</div>
-</div>
-
-
-
+</div> -->

@@ -10,41 +10,21 @@ import { Router } from '@angular/router';
 })
 export class MyTestPageComponent implements OnInit {
 
+  isToastActive: boolean = false;
+
   constructor(
     private setting: AppSettingService,
     private infoService: InformationService,
     private router: Router
   ) { }
     
-  invoiceData : any; 
-  total: number;
-  id: string;
-  data: any;
-  test: number;
-  spinner: boolean;
-  searchValue: string;
-  isActive: boolean;
-  dataArr: any;
-  getAllDeta: any;
   
   ngOnInit() {
-    this.getAllDetails();
   }
 
-  getAllDetails() {
-    this.infoService.getAllService().then((res: any) => {
-      this.getAllDeta = res;
-      const data = this.getAllDeta;
-      this.invoiceData = data;
-      this.dataArr = data;
-      const reducer = (accumulator, currentValue) => accumulator + currentValue.amount;
-      this.total = this.invoiceData.reduce(reducer, 0);
-    });
+  test() {
+    this.isToastActive = true;
   }
-
-  
-
- 
 
 
 }

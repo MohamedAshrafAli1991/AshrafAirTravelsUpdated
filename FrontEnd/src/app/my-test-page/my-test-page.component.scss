@@ -1,0 +1,20 @@
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  //width: 100px;
+  height: 700px; 
+  //border-right: 2px solid black;
+}
+#slide {
+  position: absolute;
+  right: -900px;
+  width: 275px;
+  //background: blue;
+  transition: 1s;
+}
+.wrapper-active #slide {
+  transition: 1s;
+  top: 25px;
+  right: 3px;
+}
+

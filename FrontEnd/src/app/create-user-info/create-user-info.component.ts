@@ -22,9 +22,9 @@ export class CreateUserInfoComponent implements OnInit {
               private setting : AppSettingService) { }
 
  ngOnInit() {
-  var today = new Date();
-  var str = today.toString();
-  this.setting.empId = 'CUS'+ (str.split(" ",4).join('').toUpperCase()) + 'ASH' + '2';
+  // var today = new Date();
+  // var str = today.toString();
+  // this.setting.empId = 'CUS'+ (str.split(" ",4).join('').toUpperCase()) + 'ASH' + '2';
  }
   
   async userToken(event) {

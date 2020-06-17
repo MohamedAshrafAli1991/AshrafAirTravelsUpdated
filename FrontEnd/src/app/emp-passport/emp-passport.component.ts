@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastSubjectService } from '../service/toast-subject.service';
 
 @Component({
   selector: 'app-emp-passport',
@@ -15,10 +16,11 @@ isError: boolean;
 @ViewChild('demomodel',{static:true}) demomodel : ElementRef;
 
 // @Input('name') name: string;
-  constructor( private router: Router) { }
+  constructor( private router: Router, private subject: ToastSubjectService) { }
   
   ngOnInit() {
   }
+
   numberValidate(event) {
     let data = event.target.value;
     if(data) {
@@ -39,5 +41,8 @@ isError: boolean;
     }
   }
 
-
+  text() {
+    alert('Test');
+    this.subject.updatedDataSelection(0);
+  }
 }

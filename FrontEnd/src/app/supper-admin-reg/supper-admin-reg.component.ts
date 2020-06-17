@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { AppSettingService } from '../service/app-setting.service';
 import { InformationService } from '../information.service';
-import { getLocaleDateFormat } from '@angular/common';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-supper-admin-reg',
@@ -10,54 +10,93 @@ import { Router } from '@angular/router';
   styleUrls: ['./supper-admin-reg.component.scss']
 })
 export class SupperAdminRegComponent implements OnInit {
-  @ViewChild('f', { static: true }) f: any;
+  // @ViewChild('f', { static: true }) f: any;
+  @ViewChild('employee', {static: false}) employee: any;
+  @ViewChild('broker',{static: false}) broker: any;
   @ViewChild('demomodel',{static:true}) demomodel : ElementRef;
-  cus = {cell:'',role:'customer',name:'',amount:''};
-  isValid: boolean;
 
-  constructor(private setting: AppSettingService,
-    private infoService: InformationService,
-    private router: Router) { }
+  emp = {fullName: '', cellNumber: ''};
+  bro = {fullName:'', cellNumber: ''};
+  isTemp = [];
+  isValid: boolean;
+  isType : string;
+  isTypeEmp : boolean;
+  dateString : string;
+
+  constructor(private localSetting: AppSettingService,
+              private infoService: InformationService,
+              private router: Router) { }
   
   ngOnInit() {
+    this.isTypeEmp = true;
   } 
-  
-  pay() {
-    this.router.navigateByUrl('test');
-  }
-  onSubmit() {
-    // if(this.f.valid) {
-    //   const el: HTMLElement = this.demomodel.nativeElement as HTMLElement;
-    //   el.click();
-    // }
-    // let temp = {
-    //   customerName:"Parama",
-    //   customerId: "CUSMONMAY112020PMO2",
-    //   date: "2020-01-02",
-    //   type:"pan",
-    //   amount: 1000,
-    //   expense: 500,
-    //   profit: 300,
-    //   percentage: 100,
-    //   status: "approved",
-    //   tsActive:true,
-    //   role:"customer",
-    //   phone:"9566340416",
-    //   document:"valid"
-    //}
-    if(this.f.valid) {
-      let dateObj  = new Date();
-      let month = dateObj.getUTCMonth() + 1; //months from 1-12
-      let day = dateObj.getUTCDate();
-      let year = dateObj.getUTCFullYear();
-      let dateString = year + '-' + month + '-' + day;
 
-       //console.log(dateString);
-       let vlaue = this.f.value;
+  chooseUserType(type) {
+    this.isType = type;
+    if(type == 'emp') {
+      this.isTypeEmp = true;
+    } else {
+      this.isTypeEmp = false;
+    }
+  }
+
+  onSubmit(type) {
+    if(type == 'emp') {
+      if(!this.employee.valid) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Mandatory fields must be filled!',
+          showConfirmButton: false,
+          timer: 1500
+        })
+      } else {
+        this.generateToken(type,this.emp.fullName);
+        Swal.fire({
+          icon: 'success',
+          title: 'Registered successfully!',
+          showConfirmButton: false,
+          timer: 1500
+       })
+      }
+    }
+    if(type == 'broker') {
+      if(!this.broker.valid) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Mandatory fields must be filled!',
+          showConfirmButton: false,
+          timer: 1500
+        })
+      } else {
+        this.generateToken(type,this.bro.fullName);
+        Swal.fire({
+          icon: 'success',
+          title: 'Registered successfully!',
+          showConfirmButton: false,
+          timer: 1500
+       })
+      }
+    }
+  }
+  generateToken(type,name) {
+      let regType = (type.substring(0,3)).toUpperCase();
+      let regName = name.substring(0,3);
+      let modelValue = this.emp.fullName
+      var today = new Date();
+      var str = today.toString();
+      var split = str.split(' ');
+      var month = split[1];
+      var date = split[2];
+      var year = split[3].substring(0,2);
+      var tokenSecondHalf = (regType+month+date+year+regName).toUpperCase();
+      this.localSetting.brokerId = tokenSecondHalf + '02';
+  }
+  onSubmitsss() {
+       let vlaue = this.broker.value;
        let temp = {
         customerName: vlaue.name,
         customerId: "CUSMONMAY112020PMO2",
-        date: dateString,
+        date: this.dateString,
         type:"pan",
         amount: vlaue.amount,
         expense: 500,
@@ -70,10 +109,9 @@ export class SupperAdminRegComponent implements OnInit {
         document:"valid"
       }
       console.log(temp);
-      this.infoService.getAdminService(temp).then(res => {
-        console.log(res);
-      });
-    }
+      // this.infoService.getAdminService(temp).then(res => {
+      //   console.log(res);
+      // });
   }
 
 

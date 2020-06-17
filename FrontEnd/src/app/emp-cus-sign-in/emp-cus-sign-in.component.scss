@@ -11,13 +11,14 @@ h1 {
 }
 
 input {
+    vertical-align: text-bottom;
     width: 80%;
-    font-size: 38px;
+    font-size: 32px;
     padding: 0px;
     border: none;
     color: #327e90;
     margin-left: 100px;
-    text-transform: uppercase;
+    text-transform: capitalize;
     outline: none;
 }
 

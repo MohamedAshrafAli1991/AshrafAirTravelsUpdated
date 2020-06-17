@@ -25,46 +25,56 @@
     </div>
   </label>
   </div>
-  <div class="row" *ngIf="!newCustomer">
-      <div class="col-3"></div>
-      <div class="col-6">
+  <div *ngIf="!newCustomer">
+      <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
         <fieldset class="border p-2">
             <legend  class="w-auto"><i class="icofont-transparent color"></i> &nbsp;<small>Token</small></legend>
-            <input type="text" value="CUS123456789" id="name"/>
+            <input type="text" placeholder="User Token" id="token" [(ngModel)]="token"/>
          </fieldset>
+        </div>
+        <div class="col-3"></div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-12 text-center">
+          <div class="btn-position-cus">
+            <button class="btncus btncus-outline-primary" (click)="signIn('existing')">Sign-In</button>
+          </div> 
+        </div>
       </div>
   </div>
-  <div class="row">
-    <div class="col-12">
-      
-    </div>
-  </div>
   <div *ngIf="newCustomer">
-  <div class="row">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+          <fieldset class="border p-2">
+              <legend  class="w-auto"><i class="icofont-phone color"></i>&nbsp; <small>Mobile Number</small></legend>
+              <input type="number" placeholder="Mobile Number" id="mobileNumber" [(ngModel)]="customerMobileNumber" maxlength="10"/>
+          </fieldset>
+        </div>
+    </div>
+    <br>
+    <div class="row">
       <div class="col-3"></div>
       <div class="col-6">
         <fieldset class="border p-2">
-            <legend  class="w-auto"><i class="icofont-phone color"></i>&nbsp; <small>Mobile Number</small></legend>
-            <input type="number" value="9442477040" id="mobileNumber" maxlength="10"/>
-         </fieldset>
+            <legend  class="w-auto"><i class="icofont-phone color"></i>&nbsp; <small>Customer Name</small></legend>
+            <input style="font-size: 30px;" type="text" placeholder="Customer Name" [(ngModel)]="customerName" id="cusName"/>
+        </fieldset>
       </div>
-  </div>
-  <br>
-  <div class="row">
-    <div class="col-3"></div>
-    <div class="col-6">
-      <fieldset class="border p-2">
-          <legend  class="w-auto"><i class="icofont-phone color"></i>&nbsp; <small>Customer Name</small></legend>
-          <input style="font-size: 30px;" type="text" value="Mohamed Ashraf Ali" id="name"/>
-       </fieldset>
-    </div>
-</div>
-  </div>
-<br>
-  <div class="row">
-    <div class="col-12 text-center">
-      <div class="btn-position-cus">
-        <button class="btncus btncus-outline-primary" (click)="signIn()">Sign-In</button>
-      </div> 
+     </div>
+     <br>
+    <div class="row">
+      <div class="col-12 text-center">
+        <div class="btn-position-cus">
+          <button class="btncus btncus-outline-primary" (click)="signIn('new')">Save & Sign-In</button>
+        </div> 
+      </div>
     </div>
   </div>
+
+
+
+  

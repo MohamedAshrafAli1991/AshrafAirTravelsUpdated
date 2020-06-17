@@ -1,84 +1,107 @@
 <header id="">
 	<nav class="links" style="--items: 3;">
 		<a class="text-left"><i class="icofont-simple-smile"></i>&nbsp;&nbsp;&nbsp; Mohamed Ashraf Ali</a>
-		<a></a>
-		<a class="text-right"> <i class="icofont-ui-messaging"></i>&nbsp;&nbsp;&nbsp;<i class="icofont-sign-out text-right"></i></a>
+		<a> <i class="icofont-ui-messaging text-right"></i>&nbsp;&nbsp;&nbsp;</a>
+		<a class="text-right"><i class="icofont-sign-out text-right"></i></a>
 		<span class="line"></span>
 	</nav>
 </header>
-<!-- <header id="">
-	<nav class="links" style="--items: 5;">
-		<a routerLink="/emp/screen/passport">PassPort</a>
-		<a routerLink="/emp/screen/ticket">Ticket</a>
-		<a routerLink="/emp/screen/xerox">Xerox</a>
-		<a routerLink="/emp/screen/visa">Visa</a>
-		<a routerLink="/emp/screen/detail">Detail(s) Screen</a>
-		<span class="line"></span>
-	</nav>
-</header> -->
-<!-- <div class="row">
-	<div class="col-6">
-	  <div class="form">
-		<input class="search-input" type="search"/>
-		<i class="fa icofont-search-user"></i>
-	  </div>
-	</div>
-  </div> -->
-  <div style="margin-top: 60px; margin-left: 25px; margin-right: 25px;">
-	<div class="wrapper bg-white" style="padding-top: 40px;padding-bottom: 60px;">
-		<!-- Sidebar  -->
-		<nav id="sidebar" style="border-right: 1px solid #e6e6e6ba;">
-			<div style="width: 0px;height:0px;">
-				<div class="line-vertical"></div>
-			</div>
-			<div  >
-				<ul class="list-unstyled ml-3 mt-3 text-left" (click)="selectedElement()">
-					<li class="text-muted"   routerLinkActive="active" >
-						<a routerLink="/emp/screen/signin"> <span class="icofont-sign-in"></span>Sign-In</a>
-					</li>
-					<li class="text-muted"   routerLinkActive="active" >
-						<a routerLink="/emp/screen/passport"> <span class="icofont-penalty-card"></span>PassPort</a>
-					</li>
-					<li  class="text-muted"  routerLinkActive="active">
-						<a routerLink="/emp/screen/ticket"><span class="icofont-air-ticket"></span>Ticket</a>
-					</li>
-					<li  class="text-muted"  routerLinkActive="active">
-						<a routerLink="/emp/screen/pan"><span class="icofont-bank-transfer-alt"></span>Pan</a>
-					</li>
-					<li  class="text-muted"  routerLinkActive="active">
-						<a routerLink="/emp/screen/xerox"><span class="icofont-pixels"></span>Xerox</a>
-					</li>
-					<li  class="text-muted"  routerLinkActive="active">
-						<a routerLink="/emp/screen/visa"><span class="icofont-brand-sk-telecom"></span>Visa</a>
-					</li>
-					<li  class="text-muted" routerLinkActive="active">
-						<a routerLink="/emp/screen/detail"><span class="icofont-stack-exchange"></span>V / Stamping</a>
-					</li>
-					<li  class="text-muted" routerLinkActive="active">
-						<a routerLink="/emp/screen/detail"><span class="icofont-euro-plus"></span> Exchange</a>
-					</li>
-					<li  class="text-muted" routerLinkActive="active">
-						<a routerLink="/emp/screen/detail"><span class="icofont-stack-exchange"></span>Stamping</a>
-					</li>
-					<li  class="text-muted" routerLinkActive="active">
-						<a routerLink="/emp/screen/other"><span class="icofont-attachment"></span>Other</a>
-					</li>
-					<li  class="text-muted" routerLinkActive="active">
-						<a routerLink="/emp/screen/detail"><span class="icofont-info"></span>User Info</a>
-					</li>
-					<li  class="text-muted"  routerLinkActive="active">
-						<a routerLink="/emp/screen/signout"><span class="icofont-sign-out"></span>Sign-out</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-	
-		<!-- Page Content  -->
-		<div id="content">
-			<router-outlet></router-outlet>
+
+
+<div style="margin-top: 60px; margin-left: 25px; margin-right: 25px;">
+<div class="wrapper bg-white" style="padding-top: 40px;padding-bottom: 60px;">
+	<!-- Sidebar  -->
+	<nav id="sidebar" style="border-right: 1px solid #e6e6e6ba;">
+		<div style="width: 0px;height:0px;">
+			<div class="line-vertical"></div>
 		</div>
-	  </div>
-  </div>
+		<div  >
+			<ul class="list-unstyled ml-3 mt-3 text-left" (click)="selectedElement()">
+				<li class="text-muted"   routerLinkActive="active" >
+					<a routerLink="/emp/screen/signin"> <span class="icofont-sign-in"></span>Sign-In</a>
+				</li>
+				<li class="text-muted"   routerLinkActive="active" >
+					<a routerLink="/emp/screen/passport"> <span class="icofont-penalty-card"></span>PassPort</a>
+				</li>
+				<li  class="text-muted"  routerLinkActive="active">
+					<a routerLink="/emp/screen/ticket"><span class="icofont-air-ticket"></span>Ticket</a>
+				</li>
+				<li  class="text-muted"  routerLinkActive="active">
+					<a routerLink="/emp/screen/pan"><span class="icofont-bank-transfer-alt"></span>Pan</a>
+				</li>
+				<li  class="text-muted"  routerLinkActive="active">
+					<a routerLink="/emp/screen/xerox"><span class="icofont-pixels"></span>Xerox</a>
+				</li>
+				<li  class="text-muted"  routerLinkActive="active">
+					<a routerLink="/emp/screen/visa"><span class="icofont-brand-sk-telecom"></span>Visa</a>
+				</li>
+				<li  class="text-muted" routerLinkActive="active">
+					<a routerLink="/emp/screen/detail"><span class="icofont-stack-exchange"></span>V / Stamping</a>
+				</li>
+				<li  class="text-muted" routerLinkActive="active">
+					<a routerLink="/emp/screen/detail"><span class="icofont-euro-plus"></span> Exchange</a>
+				</li>
+				<li  class="text-muted" routerLinkActive="active">
+					<a routerLink="/emp/screen/detail"><span class="icofont-stack-exchange"></span>Stamping</a>
+				</li>
+				<li  class="text-muted" routerLinkActive="active">
+					<a routerLink="/emp/screen/other"><span class="icofont-attachment"></span>Other</a>
+				</li>
+				<li  class="text-muted" routerLinkActive="active">
+					<a routerLink="/emp/screen/detail"><span class="icofont-info"></span>User Info</a>
+				</li>
+				<li  class="text-muted"  routerLinkActive="active">
+					<a routerLink="/emp/screen/signout"><span class="icofont-sign-out"></span>Sign-out</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<!-- Page Content  -->
+	<div id="content">
+		<router-outlet></router-outlet>
+	</div>
+	</div>
+</div>
+<!-- TOAST Message -->
+<div>
+	<div style="height: 0px;" class="position-absolute w-25" style="top: 55px; right: 4px;">
+		<div class="row">
+			<div class="col-9"></div>
+			<div class="col-3">
+				<div class="bell-icon" tabindex="0" (click)="enableToastMsg()">
+					<svg version="1.1" x="0px" y="0px" width="50px" height="30px" viewBox="0 0 50 30" enable-background="new 0 0 50 30" xml:space="preserve">
+					<g class="bell-icon__group">
+						<path class="bell-icon__ball" id="ball" fill-rule="evenodd" stroke-width="0.5" clip-rule="evenodd" fill="none" stroke="#currentColor" stroke-miterlimit="10" d="M28.7,25 c0,1.9-1.7,3.5-3.7,3.5s-3.7-1.6-3.7-3.5s1.7-3.5,3.7-3.5S28.7,23,28.7,25z"/>
+						<path class="bell-icon__shell" id="shell" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" stroke="#currentColor" stroke-width="0.7" stroke-miterlimit="10" d="M35.9,21.8c-1.2-0.7-4.1-3-3.4-8.7c0.1-1,0.1-2.1,0-3.1h0c-0.3-4.1-3.9-7.2-8.1-6.9c-3.7,0.3-6.6,3.2-6.9,6.9h0 c-0.1,1-0.1,2.1,0,3.1c0.6,5.7-2.2,8-3.4,8.7c-0.4,0.2-0.6,0.6-0.6,1v1.8c0,0.2,0.2,0.4,0.4,0.4h22.2c0.2,0,0.4-0.2,0.4-0.4v-1.8 C36.5,22.4,36.3,22,35.9,21.8L35.9,21.8z"/>
+					</g>
+					</svg>
+					<div class="notification-amount">
+					<span>{{toastCount}}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wrappers" [ngClass]="{'wrappers-active': isToastActive}">
+			<div id="slide">
+			  <div class="scroll">
+				<div class="toast fade show toast ml-auto">
+				  <div class="toast-header">
+					  <strong class="mr-auto" style="color: #2a6059;"><i class="icofont-transparent"></i>CUS876354656</strong>
+					  <small class="text-muted">55 minutes ago</small>
+					  <button type="button" class="ml-0 mb-0 close" style="font-size: 19px; outline: none;" data-dismiss="toast" (click)="disableToastMsg()"><i class="icofont-arrow-right"></i></button>
+				  </div>
+				  <div class="row toast-body">
+					  <div class="col-lg-8" style="color:#6c757d">Mohamed Ashraf Ali</div>
+					  <div class="col-lg-4 text-right blink_me" style="color:#295f58">Approved</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+	</div>
+</div>
+
+
 
 
 
