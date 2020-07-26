@@ -22,6 +22,8 @@ import { EmpCusSignInComponent } from './emp-cus-sign-in/emp-cus-sign-in.compone
 import { EmpCusSignOutComponent } from './emp-cus-sign-out/emp-cus-sign-out.component';
 import { EmpPanComponent } from './emp-pan/emp-pan.component';
 import { EmpOtherComponent } from './emp-other/emp-other.component';
+import { EmpExchangeComponent } from './emp-exchange/emp-exchange.component';
+import { EmpStampingComponent } from './emp-stamping/emp-stamping.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,8 @@ import { EmpOtherComponent } from './emp-other/emp-other.component';
     EmpCusSignOutComponent,
     EmpPanComponent,
     EmpOtherComponent,
+    EmpExchangeComponent,
+    EmpStampingComponent,
   ],
   imports: [
     BrowserModule,

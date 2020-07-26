@@ -1,4 +1,89 @@
-<h1 class="heading-right">Ticket</h1>
+<h2 class="heading-right">Ticket</h2>
+<div class="content">
+  <div class="row">
+    <div class="col-6 text-left header-token">
+      <strong><i class="icofont-transparent"></i>CUS876354656</strong>
+    </div>
+    <div class="col-6 text-right">
+      <small style="color: #909699"><i class="icofont-phone-circle"></i>+91 94424-77040</small>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 header-icon text-center">
+      <span class="icofont-air-ticket"></span>
+    </div>
+  </div>
+</div>
+<div class="content">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-6">
+            <div class="form__group field">
+                <input type="text" class="form__field" placeholder="FullName" name="FullName" id='name' autocomplete="off" required />
+                <label for="name" class="form__label">Passport Number</label>
+              </div>
+        </div>
+        <div class="col-2"></div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-4"></div>
+      <div class="col-6">
+            <div class="form__group field">
+                <input type="text" class="form__field" placeholder="FullName" name="FullName" id='name' autocomplete="off" required />
+                <label for="name" class="form__label">From</label>
+              </div>
+        </div>
+        <div class="col-2"></div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-4"></div>
+      <div class="col-6">
+            <div class="form__group field">
+                <input type="number" class="form__field" placeholder="FullName" name="FullName" id='name' autocomplete="off" required />
+                <label for="name" class="form__label">To</label>
+              </div>
+        </div>
+        <div class="col-2"></div>
+    </div>  
+  <br>
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-6">
+          <div class="form__group field">
+              <input type="date" class="form__field" placeholder="UserName" name="UserName" id='name' required />
+              <label for="name" class="form__label">From Date</label>
+            </div>
+      </div>
+      <div class="col-2"></div>
+    </div>
+  <br>
+  <br>
+  <br>
+  <div class="row">
+    <div class="col-6 text-right">
+      <div class="btn-position-cus">
+        <button class="btncus btncus-outline-primary" (click)="payment()">Process to pay</button>
+      </div> 
+    </div>
+    <div class="col-6 text-left">
+      <div class="btn-position-cus">
+        <button class="btncus btncus-outline-primary" (click)="saveTicket()">Save</button>
+      </div> 
+    </div>
+  </div>
+</div>
+<div class="note">
+  <strong>Notes</strong>
+  <ul>
+  <li>Passport application can be processed at any PSK/POPSK/PSLK WITHIN INDIA irrespective of your residential address.</li>
+      <li>Please Fill <code>all mandatory</code> fields <code><span class="icofont-warning"></span></code>.</li>
+  </ul>
+</div>
+
+
+
 <div class="row">
   <div class="col-6">
     <!-- <div class="content" style="border: 0.9px dotted #80808059;">
@@ -78,33 +163,4 @@
 	<symbol  id="airplane" viewBox="243.5 245.183 25 21.633"><g><path fill="#2c655e" d="M251.966,266.816h1.242l6.11-8.784l5.711,0.2c2.995-0.102,3.472-2.027,3.472-2.308 c0-0.281-0.63-2.184-3.472-2.157l-5.711,0.2l-6.11-8.785h-1.242l1.67,8.983l-6.535,0.229l-2.281-3.28h-0.561v3.566 c-0.437,0.257-0.738,0.724-0.757,1.266c-0.02,0.583,0.288,1.101,0.757,1.376v3.563h0.561l2.281-3.279l6.535,0.229L251.966,266.816z"/></g></symbol>
 </svg>
 
-<!-- TOAST Message -->
-<!-- <div>
-  <div style="height: 0px;" class="position-absolute w-25" style="top: 55px; right: 2px;">
-      <div class="scroll">
-          <div class="toast fade show toast ml-auto">
-              <div class="toast-header">
-                  <strong class="mr-auto" style="color: #2a6059;"><i class="icofont-transparent"></i>CUS876354656</strong>
-                  <small class="text-muted">55 minutes ago</small>
-                  <button type="button" class="ml-0 mb-0 close" style="font-size: 19px; outline: none;" data-dismiss="toast"><i class="icofont-arrow-right"></i></button>
-              </div>
-              <div class="row toast-body">
-                  <div class="col-lg-8" style="color:#6c757d">Mohamed Ashraf Ali</div>
-                  <div class="col-lg-4 text-right blink_me" style="color:#295f58">Approved</div>
-              </div>
-          </div>
-          <div class="toast fade show toast ml-auto">
-            <div class="toast-header">
-                <strong class="mr-auto" style="color: #2a6059;"><i class="icofont-transparent"></i>CUS876354656</strong>
-                <small class="text-muted">55 minutes ago</small>
-                <button type="button" class="ml-0 mb-0 close" style="font-size: 19px; outline: none;" data-dismiss="toast"><i class="icofont-arrow-right"></i></button>
-            </div>
-            <div class="row toast-body">
-                <div class="col-lg-8" style="color:#6c757d">Paramasivam</div>
-                <div class="col-lg-4 text-right blink_me" style="color:#295f58">Approved</div>
-            </div>
-        </div>
-      </div>
-  </div>
-</div> -->
 

@@ -17,6 +17,8 @@ import { EmpCusSignInComponent } from './emp-cus-sign-in/emp-cus-sign-in.compone
 import { EmpCusSignOutComponent } from './emp-cus-sign-out/emp-cus-sign-out.component';
 import { EmpPanComponent } from './emp-pan/emp-pan.component';
 import { EmpOtherComponent } from './emp-other/emp-other.component';
+import { EmpExchangeComponent } from './emp-exchange/emp-exchange.component';
+import { EmpStampingComponent } from './emp-stamping/emp-stamping.component';
 
 
 const routes: Routes = [
@@ -34,9 +36,11 @@ const routes: Routes = [
       { path: 'passport', component: EmpPassportComponent },
       { path: 'visa', component: EmpVisaComponent },
       { path: 'detail', component: EmpDetailComponent },
-      {path: 'pan', component: EmpPanComponent},
-      {path:'other', component: EmpOtherComponent},
-      {path: 'signout', component: EmpCusSignOutComponent},
+      { path: 'pan', component: EmpPanComponent},
+      { path: 'other', component: EmpOtherComponent},
+      { path: 'exchange', component: EmpExchangeComponent},
+      { path: 'stamping', component: EmpStampingComponent},
+      { path: 'signout', component: EmpCusSignOutComponent},
     ]
   },
   {
